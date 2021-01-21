@@ -1,0 +1,90 @@
+Le champ actif ou active permet de masquer des entités qui ne sont 
+plus utilisées sans les supprimer.
+
+1 Ruche
+- nom String (non null, unique)
+- active boolean
+- dateAcquisition LocalDate
+- poidsVide Integer
+- type RucheType
+- essaim Essaim
+- rucher Rucher
+- longitude Float
+- latitude Float
+- commentaire String
+
+2 RucheType
+- nom String (non null, unique)
+- nbCadresMax Integer
+
+3 Rucher
+- nom String (non null, unique)
+- dépot boolean
+- contact Personne
+- adresse String
+- commentaire String
+- longitude Float
+- latitude Float
+- altitude Integer
+- actif boolean
+- ressource String (lavande, châtaigners...)
+
+4 Essaim
+- nom String (non null, unique)
+- dateAcquisition LocalDate
+- actif boolean
+- commentaire String
+- reineDateNaissance LocalDate
+- reineMarquee boolean
+- souche Essaim
+- agressivite Integer
+- proprete Integer
+
+5 Hausse
+- nom String (non null, unique)
+- ruche Ruche
+- ordreSurRuche Integer
+- active boolean
+- dateAcquisition LocalDate
+- nbCadres Intger
+- nbCadresMax Integer
+- poidsVide Integer
+- commentaire String
+
+6 Personne
+- nom String
+- prenom String 
+- adresse String
+- tel String
+- email String (unique)
+- active boolean
+- login String (unique)
+- password String
+- roles String ("admin" permet de modifier des personnes et de gérer le déploiement et les dumps)
+- token String (pour "mot de passe oublié")
+- tokenexpiration LocalDateTime (date d'expiration du token)
+
+7 Récolte
+- date LocalDateTime
+- typeMiel String
+- poidsMiel Integer
+- commentaire String
+
+8 Récolte hausse
+- recolte Recolte
+- poidsAvant Integer
+- poidsApres Integer
+- hausse Hausse
+- ruche Ruche
+- essaim Essaim
+- rucher Rucher
+
+9 Événements
+- date LocalDateTime
+- type TypeEvenement
+- ruche Ruche
+- essaim Essaim
+- rucher Rucher
+- hausse Hausse
+- valeur String
+- commentaire String

@@ -1,0 +1,94 @@
+- Installation des paquets sur un server debian
+  apt update
+  apt upgrade -y
+  # installation de apache, tomcat, la lib pour tomcat native apr, postgres
+  #   le parefeu ufw et sudo
+  # git, jdk, maven pour une génération locale du fichier war à partir des sources clonées
+  apt install -y --no-install-recommends git default-jdk maven \
+    apache2 tomcat9 libtcnative-1 ufw sudo xz-utils curl postgresql
+  apt clean
+
+- Configuration minimale du parefeu.
+  On autorise tous les appels sortants et uniquement les appels entrants ssh, http et https
+  /usr/sbin/ufw default deny incoming
+  /usr/sbin/ufw default allow outgoing
+  /usr/sbin/ufw allow 22
+  /usr/sbin/ufw allow 80
+  /usr/sbin/ufw allow 443
+  
+- Configuration apache
+    Copier le fichier docs/installation/vhost.conf sous /etc/apache2/sites-available
+    Activation de ce fichier :
+    /usr/sbin/a2ensite vhost.conf
+    Activation des modules apache ssl (https) proxy et proxy_ajp (redirect apache tomcat)
+    /usr/sbin/a2enmod ssl
+    /usr/sbin/a2enmod proxy
+    /usr/sbin/a2enmod proxy_ajp
+    
+- Configuration Tomcat
+   Copier le fichier docs/installation/server.xml sous /etc/tomcat9
+   Copier le fichier docs/installation/context.xml sous /etc/tomcat9/Catalina/localhost/
+ 
+- Clone des sources puis création du fichier war
+  git clone https://gitlab.com/ooioo/ruches.git
+  cd ruches
+  mvn clean package -DskipTests
+
+- Créer la base initiale :
+    psql -c 'drop database ruches;'
+    psql -c 'create database ruches;'
+    psql -f sql/structure.sql ruches
+    psql -f sql/ruches_donnees_min.sql ruches
+- Définir les paramètres de l'application dans les fichiers 
+    src/main/resources/application.properties
+    et dans le context.xml Tomcat (voir exemple de context dans le répertoire docs/installation)
+-- connexion à la base de données
+   définir paramètres de connexion dans context.xml
+-- logging.file : le chemin des fichiers log
+-- accueil.titre : le titre à afficher dans le bandeau de la page d'accueil
+-- ign.data.key : la clé de connexion à l'API IGN
+-- gg.map.key : la clé de connexion à l'API Google maps
+-- gg.map.url : l'URL de connexion à l'API Google maps
+
+- Authentification voir table Personne
+ Un utilisateur "admin", mot de passe "admin" est défini dans ruches_donnees_min.sql
+  
+- Carte Google maps
+  https://cloud.google.com/maps-platform/
+  https://developers.google.com/maps/documentation/javascript/tutorial
+-- L'affichage de ces cartes nécessite une clé
+  Voir gg.map.key et gg.map.url dans application.properties ou context.xml
+ 
+    
+- Carte IGN
+ L'extension géoportail pour openlayers 4
+ https://geoservices.ign.fr/documentation/utilisation_web/extension-ol.html
+ https://github.com/IGNF/geoportal-extensions
+ http://ignf.github.io/geoportal-extensions/openlayers-2.0.0/jsdoc/
+ -- L'affichage de ces cartes nécessite une clé :
+      ign.data.key dans application.properties
+      https://geoservices.ign.fr/documentation/diffusion/formulaire-de-commande-geoservices.html
+	  https://www.sphinxonline.com/SurveyServer/s/etudesmk/Geoservices/questionnaire.htm
+      Demander l'accès aux couches suivantes :
+      	ORTHOIMAGERY.ORTHOPHOTOS orthophos
+      	GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN-EXPRESS.STANDARD scan express standard 
+      	CADASTRALPARCELS.PARCELS parcelles cadastrales
+      	service altitudes pour interrogation altitude d'un point et profil
+      	service itinéraire
+      https://depot.ign.fr/geoportail/api/develop/tech-docs-js/webmaster/layers.html
+      
+
+- Composants opensource utilisés :
+  -- d3 pour les graphes de descendances des essaims https://d3js.org
+  -- Bootstrap responsive design https://getbootstrap.com
+  -- Datatables html tables https://datatables.net
+  -- jquery http://jquery.com
+  -- jquery-ui https://jqueryui.com
+  -- jquery.validate https://jqueryvalidation.org
+  -- chartjs graphiques javascript http://www.chartjs.org 
+  -- jquery.datetimepicker https://xdsoft.net/jqplugins/datetimepicker
+  -- cartes ign https://github.com/IGNF/geoportal-extensions
+  -- openlayers http://openlayers.org (pour geoportal-extensions)
+  -- open-iconic https://useiconic.com/open
+  -- spring boot https://projects.spring.io/spring-boot
+  -- owm-japis météo https://mvnrepository.com/artifact/net.aksingh/owm-japis

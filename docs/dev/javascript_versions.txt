@@ -1,0 +1,100 @@
+Comment mettre à jour les packages javascript :
+
+
+Les fichiers sont dans le répertoire : src/main/resources/static/js
+Mettre à jour les versions dans src/main/resources/templates/include.html
+ 
+  -- d3 6.3.0 pour les graphes de decendances des essaims
+       	 https://d3js.org/ chercher d3.zip  d3.min.js à renommer avec la version
+         d3.min-x.y.z.js à copier sous src/main/resources/static/js
+  -- d3-scale-chromatic d3-interpolate et d3-color pour la couleur des graphes jsChart
+  -- https://github.com/d3/d3-scale-chromatic/releases/tag/v2.0.0
+  		d3-scale-chromatic.min-x.y.z.js à copier sous src/main/resources/static/js
+  -- https://github.com/d3/d3-interpolate/releases/tag/v2.0.1
+  		d3-interpolate.min-x.y.z.js à copier sous src/main/resources/static/js
+  -- https://github.com/d3/d3-color/releases/tag/v2.0.0
+  		d3-color.min-x.y.z.js à copier sous src/main/resources/static/js
+  -- bootstrap 4.6.0 https://getbootstrap.com/
+       release notes : https://blog.getbootstrap.com/
+       Download ready-to-use compiled code for Bootstrap
+       bootstrap.bundle.min.js  qui inclut popper.js
+       css et js déclarés dans templates/include.html
+  -- datatables 1.10.23   https://datatables.net/download/index	
+        Step 1 styling : Bootstrap 4  4.1.1
+        Step 2 packages : DataTables (le numéro de version est affiché sur cette ligne)
+        Extensions : 
+          Buttons 1.6.5 :
+            Column visibility 1.6.5
+            HTML5 export 1.6.5
+              pdfmake 0.1.36
+            Print view 1.6.5
+          FixedHeader 3.1.7
+          Responsive 2.2.6
+          RowGroup 1.1.2
+          RowReorder 1.2.7 (utilisé par rucheAjoutRetrait.html)
+          Select 1.3.1
+        Step 3 onglet Download  Minify et Concatenate
+           Download files
+          copier datatables.min.css et datatables.min.js dans resources/static/js/datatables-x.y.z
+        https://datatables.net/plug-ins/i18n/French 
+          à copier dans le fichier js//datatables_fr.json
+          modifier la chaîne "Rechercher :" en "Rechercher"
+          Voir aussi les modifications pour diminuer la taille des chaines (<, >...)
+          modifier la version de datatables ainsi que le chemin de ce fichier
+          dans include.html
+      voir aussi : https://github.com/DataTables/Buttons
+        https://github.com/DataTables/DataTables
+        https://datatables.net/forums/
+        
+  -- jquery 3.5.1 http://jquery.com/download/ 
+   Download the compressed, production jQuery et map file sous resources/static/js
+   
+  -- jquery-ui 1.12.1 https://jqueryui.com/	
+      Quick downloads/Stable
+      https://github.com/jquery/jquery-ui/tree/master/ui/i18n
+      https://api.jqueryui.com/datepicker/
+  -- jquery.validate 1.19.2 https://jqueryvalidation.org/
+       voir aussi localization/messages_fr.min.js à copier en js/jquery.validate-1.19.2-messages_fr.min.js
+  -- graphiques (camembert recolteStat.html) 
+    chartjs 3.0.0-beta9.js
+    http://www.chartjs.org/ https://github.com/chartjs/Chart.js 
+    https://github.com/chartjs/Chart.js/releases/
+      copier le fichier Chart.bundle.min.js sous resources/static/js/chart.min-x.y.z.js
+  
+  -- jquery.datetimepicker.full.min-2.5.20.js https://xdsoft.net/jqplugins/datetimepicker/
+  		https://github.com/xdan/datetimepicker
+  		https://github.com/xdan/datetimepicker/releases
+  
+  -- openlayers (cartes ign et osm)   
+  Attention avec la version 6.4.0 à 6.4.3 le lien vers les outils ign n'est plus actif
+       voir https://github.com/IGNF/geoportal-extensions/pull/280/files
+    ol-6.3.1.js  http://openlayers.org/ https://libraries.io/npm/openlayers
+  -- Extension Géoportail pour OpenLayers (cartes ign et osm)
+      version 3.0.13  GpPluginOpenLayers.js et GpPluginOpenLayers.css
+    https://geoservices.ign.fr/documentation/utilisation_web/extension-ol3.html
+    https://github.com/IGNF/geoportal-extensions/releases
+    https://github.com/IGNF/geoportal-extensions/issues/217
+    https://www.developpez.net/forums/f1255/applications/sig-systeme-d-information-geographique/ign-api-geoportail/
+  -- export png et pdf des cartes ign et osm
+    dom-to-image-2.8.0 https://www.npmjs.com/package/dom-to-image-more
+      dans un terminal bash : bower install dom-to-image-more
+      puis copier bower_components/dom-to-image-more/dist/dom-to-image-more.min.js
+      
+    jspdf-2.1.1 https://github.com/MrRio/jsPDF (pour export pdf de la carte OSM des ruches d'un rucher)
+       version en commentaire dans le fichier jsPDF/dist/jspdf.min.js
+       
+       
+    
+    jquery-date-range-picker (pour liste événements avec choix de la période)
+    	nécessite la lib js moment
+    	https://longbill.github.io/jquery-date-range-picker/
+    	jquery-date-range-picker-0.21.1
+    moment (pour jquery-date-range-picker)
+    	https://momentjs.com/
+    	moment-with-locales.min-2.29.1.js
+    
+  
+  -- icones
+    open-iconic 1.1.0 https://useiconic.com/open
+  
+

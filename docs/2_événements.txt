@@ -1,0 +1,63 @@
+Les événements permettent de saisir avec une date les actions qui ont été réalisées dans les ruchers.
+Les types d'événements sont :
+- pour les ruchers : commentaires
+- pour des ruches : commentaires, pesée et modification des cadres
+- pour des essaims : commentaires, ajout de sucre et traitement (varroa)
+- pour des hausses : commentaires, remplissage
+
+D'autres événements sont créés lorsque l'on effectue certaines actions :
+- Ajout d'une ruche dans un rucher
+- Essaim mis dans une ruche
+- Ajout de hausse sur une ruche
+- Retrait d'une hausse d'une ruche
+- Dispersion d'un essaim
+
+1 - Listez tous les Événements : cliquez sur le menu "Évenements/Tous".
+  Si vous avez déplacé votre première ruche dans un rucher, vous devez avoir dans le tableau une ligne :
+    Date		Événement		Ruche		Essaim		Rucher
+    2020/04/23 19:13 	Ajout dans rucher 	maruche 	monessaim 	monrucher
+
+2 - Créez un Événement commentaire pour une ruche : cliquez sur le menu "Ruche/Liste".
+  Cliquez sur le nom d'une ruche pour afficher son détail.
+  Les icônes sont regroupés en trois séries :
+    La première série : Modifier, Cloner, Ajouter/Retirer/Réordonner des hausses, Changer de rucher, Supprimer
+    La deuxième série concerne les événements pour la ruche : Événements (liste), Ajouter un événement commentaire
+  Cliquez sur l'icône "Ajouter un événement commentaire".
+  Dans le formulaire saisissez la date et le commentaire.
+  Dans le détail de la ruche, si vous cliquez sur l'icône "Événements", vous aurez la liste de tous les événements
+    concernant cette ruche.
+
+3 - Créez un Événement traitement pour une essaim : cliquez sur le menu "Essaim/Liste".
+  Cliquez sur le nom d'une essaim pour afficher son détail.
+  Cliquez sur l'icône "Ajouter un événement traitement".
+    Dans le formulaire saisissez éventuellement un commentaire sur le traitement.
+    À la fin du traitement, retrait des bandelettes contre le varroa par exemple, 
+      vous pourrez créer un événement traitement en cochant la case "Fin du traitement".
+
+4 - Effectuez des ajouts de sucre ou des traitements sur des lots d'essaim : menu "Essaim/Liste"
+    Dans le liste sélectionner les essaims, puis cliquez sur l'icône approprié pour créer les événements pous tous ces essaims.
+
+5 - Quelques remarques
+    -- Dans les listes, vous pouvez n'afficher que les éléments qui contiennent une chaîne de caratères avec le champ "Recherche"
+    -- Vous pouvez faire des tris en cliquant sur les en-têtes des colonnes.
+       Cliquez une deuxième fois pour trier dans l'ordre inverse
+       Faites Majuscule Clic sur d'autres en têtes de colonnes pour faire des tris secondaire, tertiaire...
+    -- Si vous saisissez des événements quelques jours après avoir effectué une visite dans un rucher,
+         vous pouvez décaler la date : menu "Admin/Préférences", indiquez la date de la visite dans le champ "Date décalée".
+         Cliquez sur "Enregistrer", la date s'affiche dans le coin haut gauche de toutes les pages : 
+           "Date décalée : 4/22/20, 2:52 PM" par exemple.
+         Toutes les dates proposées par défaut dans les formulaires seront cette date.
+         De plus cette date avance avec le temps, ce qui permet de respecter la chronologie des actions saisies.
+         Pour désactiver cette date décalée, menu "Admin/Préférences", puis Enregistrer.
+         
+
+
+
+
+
+
+    
+
+
+
+

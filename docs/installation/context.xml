@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+  <Resource auth="Container" type="javax.sql.DataSource"
+		name="jdbc/ruches" url="jdbc:postgresql://localhost:5432/ruchesmin"
+		username="postgres" password="postgres"
+		driverClassName="org.postgresql.Driver" />
+  <Parameter name="accueil.titre" value="Les Abeilles de la bas"/>
+  <Parameter name="proxyHost" value="xxxx"/>
+  <Parameter name="proxyPort" value="8080"/>
+  <Parameter name="ign.data.key" value="qsdfqreqffefesf"/>
+  <Parameter name="gg.map.key" value="sqfererghthsez"/>
+  <Parameter name="openweathermap.key" value="qgtrhytyk"/>
+  <Parameter name="logging.file" value="${catalina.base}/ruches.log"/>
+  <Parameter name="spring.resources.cache.cachecontrol.max-age" value="7d" />
+</Context>

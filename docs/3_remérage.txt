@@ -1,0 +1,19 @@
+Changement de la reine d'un essaim
+
+Le changement de reine implique des caractéristiques nouvelles pour l'essaim qui nécessitent d'en créer un nouveau.
+La reine vit de 3 à 5 ans. Une ouvrière d’été vit en moyenne de 5 à 6 semaines et une ouvrière d’hiver de 5 à 6 mois.
+La production de miel doit être associée à un nouvel essaim.
+
+Pour le remérage il faut donc créer un nouvel essaim, disperser l'ancien essaim et mettre le nouvel essaim dans la ruche
+  de l'ancien essaim.
+ - créer un nouvel essaim avec la nouvelle reine : menu "Essaim", cliquer sur l'icône "Ajouter un essaim" et créer l'essaim
+ - disperser l'essaim : menu "Essaim", choisir l'essaim puis cliquer sur l'icône "Disperser/Remérer"
+     dans le formulaire :
+     -- déselectionner la case "Retour de la ruche au dépôt", on laisse la ruche sur son emplacement
+     -- dans la liste "Remérage : choisir l'essaim à mettre dans la ruche XX", choisir l'essaim précédemment créé
+
+L'ancien essaim est dispersé. Il est rendu enlevé de la ruche, rendu inactif et un événement dispersion est créé.
+Le nouvel essaim est mis dans la ruche de l'essaim dispersé. Un événement "Ajout dans ruche" est créé.
+
+
+

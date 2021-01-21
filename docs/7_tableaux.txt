@@ -1,0 +1,26 @@
+Les tableaux avec tris et boutons pdf, imprimer, csv
+ 
+1 - Rechercher
+   Filtre les lignes à afficher, insensible à la casse, recherche dans tous les colonnes (affichées ou non)
+    et toutes les pages.
+    
+2 - Trier
+   Cliquer sur l'en tête d'une colonne pour trier le tableau selon cette colonne, cliquer
+   une deuxième fois pour trier dans l'ordre inverse.
+   Faire Majuscule Clic sur d'autres en têtes de colonnes pour faire des tris secondaire, tertiaire...
+   sur ces colonnes
+   
+3 - Pagination
+   Afficher : choix du nombre de lignes à afficher (10, 25, 50 ou 100) par page.
+   Sous la table sont affichés les informations de pagination et de filtrage
+   
+5 - Boutons
+ - CSV : pour importer les données dans un tableur (libreoffice, openoffice, excel...)
+ - PDF : les pdf respectent les colonnes visibles
+ - Imprimer affiche une vue imprimable dans un nouvel onglet du navigateur
+ - Colonnes permet de rendre visibles ou invisibles des colonnes 
+ 
+4 - L'état d'affichage de chaque tableau est conservé au fil de la session
+  
+5 - La documentation de datatables.net
+  https://datatables.net/reference/

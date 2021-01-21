@@ -1,0 +1,42 @@
+Récolte
+
+Il s'agit d'enregistrer une opération de récolte du miel à une date donnée.
+La récolte est associée à la mémorisation de l'ensemble de hausses récoltées et à la pesée des hausses avant et après récolte.
+Dans le programme, ces hausse doivent être dans l'état concernant la récolte,
+c'est à dire sur la ruche qui a produit le miel, la ruche restant aussi dans le rucher de production.
+On mémorise ainsi la provenance du miel : ruche, essaim, rucher.
+
+Pour enregistrer une nouvelle récolte il faut donc :
+
+1 - Important : dans le programme, laisser les ruches et les hausses en place. 
+    Il ne faut pas retirer les hausses des ruches et les ruches des ruchers de production,
+    on perdrait la provenance du miel.
+    On pourra retirer les hausses et les ruches à la fin de la saisie de la récolte.
+2 - Menu "Récolte", cliquer sur l'icône "Ajouter une récolte".
+    Dans le formulaire saisir la date effective de la récolte, le "Type de miel", puis cliquer sur "Enregistrer"
+3 - Dans le détail de la récolte affiché, cliquer sur l'icône "Choix des hausses de la récolte"
+    Cliquer sur les hausse à ajouter dans la liste du bas "Ajouter des hausses".
+    Vous pouvez utiliser "Rechercher" pour taper le nom du rucher concerné et n'afficher que les hausses de ce rucher.
+    Mettre même les hausses des ruches qui n'ont pas produit de miel pour mémoriser leur présence et permettre de les
+    associer aux statistiques de production.
+4 - Une fois le choix des hausses terminé, cliquer en haut sur le titre "Récolte <date/heure>" pour revenir au détail récolte.
+5 - Dans la liste des hausses de la récolte affichée dans le détail, cliquer sur les hausses pour indiquer le poids de la
+    hausse avant récolte et le poids de la hausse après récolte, ce qui permettra de calculer le poids de miel récolté 
+    dans la hausse.
+6 - Quand la saisie des hausses est terminée, vous pourrez 
+      - dans l'écran détail de la récolte, cliquer sur l'icône "Enlever toutes les hausses de la récote de leurs ruches".
+      Toutes les hausses de la récolte sont alors enlevées de leurs ruches.
+      Les événements retrait sont créés.
+      Les remplissages des hausses sont mis à 0.
+      - rapatrier si nécessaire toutes les ruches du rucher de production vers une autre rucher en affichant cet autre rucher
+      et en ajoutant les ruches dans ce rucher.
+7 - Dans l'écran détail de la récolte, le poids total de miel récolté est affiché.
+    Vous pouvez cliquer sur l'icône "Statistiques essaims" pour afficher un graphique montrant la proportion de miel récolté
+    par essaim.
+8 - Menu "Récolte", cliquer sur "Statistiques essaims" pour afficher tous les poids de miel récoltés par essaim et par récolte.
+9 - Menu "Essaim" cliquer sur un essaim, le détail de l'essaim affiche le poids de miel produit par cet esssaim, par récolte.
+10 - Menu "Admin/Infos" donne un tableau des poids de miel par années.
+11 - Si pour une raison quelconque les informations (essaim, ruche, rucher) d'une hausse de la récolte sont erronées, vous
+      pouvez les modifier en cliquant sur le nom de la hausse dans le détail de la récolte (popup : saisir les poids).
+      Dans le formulaire qui s'affiche cliquer sur le bouton plus et modifier l'essaim, la hausse ou le rucher
+      de cette hausse de récolte. 

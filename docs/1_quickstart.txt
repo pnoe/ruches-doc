@@ -1,0 +1,65 @@
+Après installation :
+
+1 - Connectez-vous en cliquant sur le menu "Personne" avec le login "admin", mot de passe "admin".
+
+2 - Création de votre compte : menu "Personne", cliquez sur le "+" (Ajouter une personne)
+    -- dans le formulaire renseignez au minimum les champs : Nom, Prénom, Login, Password et donnez la valeur "admin" au champ Rôle.
+       Le rôle "admin" vous donne le droit de modifier les comptes des autres utilisateurs
+    -- déconnectez vous en cliquant en cliquant sur l'icône ruche en haut à gauche. Cliquez sur "Déconnexion",
+       puis reconnectez vous avec votre nouveau compte.
+
+3 - Le rucher "Dépôt" est l'endroit où vont les ruches vides.
+    Ce rucher est créé par l'installation. Vous pouvez le positionner en utilisant les cartes :
+    -- menu "Rucher", cliquer sur "Dépôt" dans la liste, puis cliquez sur l'icône carte (Google, IGN ou OSM).
+       Si les cartes IGN n'apparaissent pas, utiliser les cartes Google ou OSM, c'est un problème de configuration IGN.
+       L'emplacement du Dépôt n'a pas beaucoup d'importance. C'est un rucher fictif.
+       Carte Google : décochez la case "Marqueurs fixes", puis cliquez sur le marqueur "Dépôt" et déplacez le.
+       Carte IGN ou OSM : cliquez sur le marqueur "Dépot" pour le sélectionner (des [] encadrent alors son nom), puis cliquez et déplacez le.
+
+4 - Créez votre premier rucher de production.
+   -- menu "Rucher", cliquez sur le "+" (Ajouter un rucher)
+      Donnez un nom à ce rucher dans le formulaire, puis cliquez sur Enregistrer. Vous pourrez compléter les autres champs par la suite.
+      Pour positionner ce rucher, retournez à la liste des ruchers en cliquant sur le menu "Rucher", puis sur l'icone d'un type de carte.
+      Zoomez sur le "Dépôt" jusqu'à voir le marqueur de votre nouveau rucher et déplacez le au bon endroit.
+
+5 - Créez votre première ruche
+   -- menu "Ruche/Types de ruches", cliquez sur le + (Ajouter un type de ruche).
+      Donnez un nom à ce type de ruche puis le nombre de cadres max, par exemple "Dadant" et 10. 
+   -- menu "Ruche/Liste", cliquez sur le "+" (Ajouter une ruche).
+      Donnez un nom à cette ruche dans le formulaire, puis cliquez sur Enregistrer.
+      Sur l'écran du détail de cette ruche, vous pouvez constater que cette ruche est au Dépôt.
+      Vous pouvez afficher la carte du Dépôt pour voir cette ruche : 
+      menu "Rucher", cliquez sur le "Dépôt" dans la liste, puis sur l'icône d'une des cartes et vous pouvez voir votre ruche.
+
+6 - Créez votre premier essaim
+    -- menu "Essaim", cliquez sur le "+" (Ajouter un essaim).
+       Donnez un nom à cet essaim. Un essaim est plus une reine qu'un essaim, donnez le nom de la reine comme nom d'essaim.
+       Cliquez sur Enregistrer.
+
+7 - Mettre cette essaim dans une ruche
+     -- Dans l'écran du détail de l'essaim que vous venez de créer, cliquez sur l'icône "Associer à une ruche".
+        Puis choisissez votre nouvelle ruche dans la liste, ça y est l'essaim est dans la ruche.
+
+8 - Mettre la ruche dans le rucher
+     -- Menu "Ruche/Liste", cliquer sur la ruche dans la liste.
+        Dans l'écran du détail de la ruche, cliquez sur l'icône "Changer de rucher".
+        Choisir le rucher dans le formulaire, puis Enregistrer.
+        Vous pouvez afficher la carte du rucher pour voir cette ruche : 
+        menu "Rucher", cliquez sur le rucher dans la liste, puis sur l'icône d'une des cartes et vous pouvez voir votre ruche.
+
+9 - Quelques remarques
+    -- On peut quitter un formulaire sans Enregistrer en cliquant sur n'importe quel lien ou menu.
+    -- Il est possible de créer toute une série de ruches par clonage d'une ruche existante.
+    -- On peut déplacer toute une série de ruches dans un rucher (icône "Ajouter des ruches" dans le détail d'un rucher)
+    -- Dans le navigateur internet on peut utiliser les onglets pour afficher par exemple la liste des essaims et dans un autre onglet
+       le détail d'un essaim
+
+
+
+
+
+
+
+
+
+

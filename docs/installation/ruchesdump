@@ -1,0 +1,39 @@
+#!/bin/bash
+# cron sauvegarde base ruches dans le répertoire ${dumppath}
+#  seulement si la base a été modifiée par rapport à la dernière sauvegarde
+#  crée aussi un lien ${dumppath}ruches.sql.xz vers la sauvegarde la plus récente
+# A copier dans /etc/cron.daily pour une sauvegarde journalière de la base ${database}
+
+# Attention le nom du fichier ne doit pas contenir de "."
+# https://askubuntu.com/questions/23009/why-crontab-scripts-are-not-working
+
+date=$(date '+%Y%m%d-%H%M%S')
+dumppath=/var/ruches/dump/
+database=ruches
+
+dumpfile=${dumppath}ruches${date}.sql.xz
+dumplog=${dumppath}dump.log
+
+if [[ -f "${dumpfile}" ]]; then
+  echo "le fichier existe déjà"
+  exit
+fi
+# ok si auth utilisateur postgres en peer dans pg_hba.conf
+#   si md5 en pas utiliser sudo mais pg_dump -U postgres et mdp dans .pgpass
+#     pg_dump -U postgres ruches ...
+sudo -u postgres pg_dump --data-only ${database} 2>/dev/null | xz -c > "${dumpfile}"
+sudo -u postgres pg_dump --schema-only ${database} 2>/dev/null > "${dumppath}ruches_schema.sql"
+# cmp trouve toujours les fichiers compressés différents, utilisation de zcmp
+#  pour comparer la sauvegarde qui vient d'être réalisée avec la sauvegarde pointée
+#  par le lien symbolique
+if zcmp "${dumpfile}" ${dumppath}ruches.sql.xz  >/dev/null 2>&1
+then
+  rm "${dumpfile}" 
+  echo "${date} pas de dump" >> ${dumplog}
+else
+  ln -sf "${dumpfile}" ${dumppath}ruches.sql.xz
+  # echo "Ruches dump du ${date}" | mailx -s "${date}" -a ${dumppath}ruches.sql.xz -S smtp=smtp://smtp.free.fr -r ruches@free.fr\(ruches\) pp@free.fr
+  ##   -r from-addr
+  echo "${date} dump fait" >> ${dumplog}
+fi
+ 

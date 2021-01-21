@@ -1,0 +1,18 @@
+	TypeEvenement		Libellé					Valeurs définies (date, commentaire et ...)
+0	RUCHEAJOUTRUCHER	Ajout dans rucher		ruche, essaim, rucher
+1	AJOUTESSAIMRUCHE	Essaim mis dans ruche	ruche, essaim, rucher
+2	HAUSSEPOSERUCHE		Ajout hausse			hausse, ruche, essaim, rucher, valeur: ordre sur ruche
+3	HAUSSERETRAITRUCHE	Retrait hausse			hausse, ruche, essaim, rucher, valeur: ordre sur ruche
+4	HAUSSEREMPLISSAGE	Remplissage hausse		valeur : remplissage
+5	ESSAIMTRAITEMENT	Essaim traitement		ruche, essaim, rucher, valeur: nb de languettes insecticide ?
+6	ESSAIMTRAITEMENTFIN	Essaim fin traitement	ruche, essaim, rucher, valeur: nb de languettes insecticide enlevées ?
+7	ESSAIMSUCRE			Essaim sucre			ruche, essaim, rucher, valeur: poids sucre ajouté 
+8	COMMENTAIRERUCHE	Commentaire ruche 		ruche, essaim, rucher
+9	COMMENTAIREHAUSSE	Commentaire hausse		ruche, essaim, rucher, hausse
+10	COMMENTAIREESSAIM	Commentaire essaim		ruche, essaim, rucher
+11	COMMENTAIRERUCHER	Commentaire rucher		rucher
+12	ESSAIMDISPERSION	Dispersion de l'essaim	ruche, essaim, rucher
+13	RUCHEPESEE			Poids de la ruche		ruche, essaim, rucher, valeur: poids de la ruche
+14	RUCHECADRE			Cadres de la ruche		ruche, essaim, rucher, valeur: nb cadres, commentaires: description cadres
+
+Il ne faut pas modifier l'ordre de ces événements car leur numéro d'ordre est utilisé en bd.

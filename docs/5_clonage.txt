@@ -1,0 +1,16 @@
+Clonage
+
+Pour créer plusieurs ruches, hausses ou essaims vous pouvez utiliser le clonage.
+Par exemple pour cloner une ruche :
+
+1 - menu "Ruche/Liste", cliquer sur l'icône "Ajouter une ruche" et créez une première ruche.
+     Attention à mettre la ruche dans le bon rucher, à mettre un commentaire générique pour
+     l'ensemble des ruches clonées.
+2 - après avoir enregistré cette ruche, dans l'onglet détail de la ruche, cliquez sur
+    l'icône "Cloner".
+3 - Tapez dans la boîte de dialogue les noms des autres ruches à créer séparés par une virgule.
+4 - Ces ruches sont créées avec les mêmes caractéristiques que la première ruche :
+         active, dateAcquisition, poids à vide, rucher, latitude et commentaire
+    Les noms sont ceux donnés en paramètre et la longitude est incrémentée pour aligner les ruches
+5 - Pour les visualiser, menu "Ruche/Liste" puis cliquer sur l'en-tête de la colonne Date
+      pour trier la liste selon les dates de mises en rucher.    
