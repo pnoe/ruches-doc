@@ -1,12 +1,11 @@
 Les événements permettent de saisir avec une date les actions qui ont été réalisées dans les ruchers.
 Les types d'événements sont :
-- pour les ruchers : commentaires
-- pour des ruches : commentaires, pesée et modification des cadres
-- pour des essaims : commentaires, ajout de sucre et traitement (varroa)
-- pour des hausses : commentaires, remplissage
+- commentaires ruche, rucher, essaim et hausse
+- des événements qui caractérisent l'essaim : pesée ruche, modification des cadres ruche, ajout de sucre et traitement
+- les hausses : remplissage hausses
 
 D'autres événements sont créés lorsque l'on effectue certaines actions :
-- Ajout d'une ruche dans un rucher
+- Ajout d'une ruche dans un rucher (il n'y a pas d'événement retrait, l'ajout implique le retrait du rucher précédent)
 - Essaim mis dans une ruche
 - Ajout de hausse sur une ruche
 - Retrait d'une hausse d'une ruche
