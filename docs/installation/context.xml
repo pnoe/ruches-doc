@@ -12,4 +12,5 @@
   <Parameter name="openweathermap.key" value="qgtrhytyk"/>
   <Parameter name="logging.file" value="${catalina.base}/ruches.log"/>
   <Parameter name="spring.resources.cache.cachecontrol.max-age" value="7d" />
+  <Parameter name="rucher.butinage.rayons" value="750,1500,3000,6000" />
 </Context>
