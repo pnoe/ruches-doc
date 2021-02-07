@@ -100,6 +100,7 @@ Carte d'un rucher
 * le chemin optimal de parcours des ruches est affiché. On peut [exporter ce parcours](docs/images/exportKmlGgEarth.png) et la position des ruches au format GPX ou KML.
 * des outils permettent d'effectuer des mesures de longueur, surface et d'azimut (cartes IGN et OSM)
 * pour les cartes IGN on peut dessiner un profil, calculer une altitude et afficher les parcelles cadastrales.
+* on peut afficher des cercles pour matérialiser les distances de butinage
 
 ## Nos clients, ils nous font confiance !   :-)
 https://les-abeilles-de-la-lisette.fr/wordpress/
