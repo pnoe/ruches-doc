@@ -197,7 +197,8 @@ CREATE TABLE public.rucher (
     longitude real,
     nom character varying(255) NOT NULL,
     ressource character varying(255),
-    contact_id bigint
+    contact_id bigint,
+    dessin character varying
 );
 
 
