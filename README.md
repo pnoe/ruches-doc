@@ -101,6 +101,7 @@ Carte d'un rucher
 * des outils permettent d'effectuer des mesures de longueur, surface et d'azimut (cartes IGN et OSM)
 * pour les cartes IGN on peut dessiner un profil, calculer une altitude et afficher les parcelles cadastrales.
 * on peut afficher des cercles pour matérialiser les distances de butinage
+* des outils permettent de dessiner des polygones, des polylignes, des marqueurs avec des textes que l'on peut afficher dans des popups. Ces dessins peuvent être enregistrés en base de donnée.
 
 ## Nos clients, ils nous font confiance !   :-)
 https://les-abeilles-de-la-lisette.fr/wordpress/

@@ -28,6 +28,7 @@ plus utilisées sans les supprimer.
 - altitude Integer
 - actif boolean
 - ressource String (lavande, châtaigners...)
+- dessin String (pour dessin dans les cartes détail rucher osm et ign)
 
 4 Essaim
 - nom String (non null, unique)
