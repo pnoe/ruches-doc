@@ -19,20 +19,20 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
        Download ready-to-use compiled code for Bootstrap
        bootstrap.bundle.min.js  qui inclut popper.js
        css et js déclarés dans templates/include.html
-  -- datatables 1.10.23   https://datatables.net/download/index	
+  -- datatables 1.10.24   https://datatables.net/download/index	
         Step 1 styling : Bootstrap 4  4.1.1
         Step 2 packages : DataTables (le numéro de version est affiché sur cette ligne)
         Extensions : 
-          Buttons 1.6.5 :
-            Column visibility 1.6.5
-            HTML5 export 1.6.5
+          Buttons 1.7.0 :
+            Column visibility 1.7.0
+            HTML5 export 1.7.0
               pdfmake 0.1.36
-            Print view 1.6.5
-          FixedHeader 3.1.7
+            Print view 1.7.0
+          FixedHeader 3.1.8
           Responsive 2.2.7
           RowGroup 1.1.2
           RowReorder 1.2.7 (utilisé par rucheAjoutRetrait.html)
-          Select 1.3.1
+          Select 1.3.2
         Step 3 onglet Download  Minify et Concatenate
            Download files
           copier datatables.min.css et datatables.min.js dans resources/static/js/datatables-x.y.z
@@ -56,7 +56,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   -- jquery.validate 1.19.3 https://jqueryvalidation.org/
        voir aussi localization/messages_fr.min.js à copier en js/jquery.validate-1.19.3-messages_fr.min.js
   -- graphiques (camembert recolteStat.html) 
-    chartjs 3.0.0-beta11.js
+    chartjs 3.0.0-beta13.js
     http://www.chartjs.org/ https://github.com/chartjs/Chart.js 
     https://github.com/chartjs/Chart.js/releases/
       copier le fichier Chart.bundle.min.js sous resources/static/js/chart.min-x.y.z.js
