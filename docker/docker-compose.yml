@@ -1,0 +1,19 @@
+version: "3"
+services:
+  tomcat:
+    build: ./ruches_tomcat
+    ports:
+      - "8080:8080"
+    links:
+      - postgres
+    depends_on:
+      - postgres
+  postgres:
+    build: ./ruches_postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes: 
+    - "pgdata:/var/lib/postgresql/data"
+volumes:
+  pgdata:
+
