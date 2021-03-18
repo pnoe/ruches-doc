@@ -18,5 +18,6 @@ RUN git clone https://gitlab.com/ruches/ruches.git \
     && rm -rf $CATALINA_HOME/webapps/* \
     && mkdir $CATALINA_HOME/webapps/ROOT \
     && cd $CATALINA_HOME/webapps/ROOT \
-    && jar -xvf $CATALINA_HOME/ruches/target/ruches.war.original
+    && jar -xvf $CATALINA_HOME/ruches/target/ruches.war.original \
+    && rm -rf $CATALINA_HOME/ruches $MAVEN_CONFIG
 COPY application.properties /usr/local/tomcat/webapps/ROOT/WEB-INF/classes
