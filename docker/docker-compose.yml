@@ -4,6 +4,8 @@ services:
     build: ./ruches_tomcat
     ports:
       - "8080:8080"
+    volumes: 
+      - "tomcatruches:/usr/local/tomcat/webapps"
     links:
       - postgres
     depends_on:
@@ -16,4 +18,5 @@ services:
     - "pgdata:/var/lib/postgresql/data"
 volumes:
   pgdata:
+  tomcatruches:
 

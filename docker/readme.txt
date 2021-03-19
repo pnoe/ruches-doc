@@ -15,4 +15,5 @@ OpenWeatherMap also need a key.
    -- In an internet browser : http://localhost:8080
          login : admin   password : admin  
 
+- To stop docker and keep database and ruches program : docker-compose down
 - To stop docker and remove all : docker-compose down --rmi all -v
