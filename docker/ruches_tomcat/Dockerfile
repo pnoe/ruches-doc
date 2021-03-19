@@ -19,5 +19,8 @@ RUN git clone https://gitlab.com/ruches/ruches.git \
     && mkdir $CATALINA_HOME/webapps/ROOT \
     && cd $CATALINA_HOME/webapps/ROOT \
     && jar -xvf $CATALINA_HOME/ruches/target/ruches.war.original \
-    && rm -rf $CATALINA_HOME/ruches $MAVEN_CONFIG
-COPY application.properties /usr/local/tomcat/webapps/ROOT/WEB-INF/classes
+    && rm -rf $CATALINA_HOME/ruches $MAVEN_CONFIG \
+    && echo "spring.datasource.jndi-name=false\n \
+       spring.datasource.url=jdbc:postgresql://postgres:5432/ruches\n \
+       spring.datasource.username=postgres\n \
+       spring.datasource.password=postgres" >> $CATALINA_HOME/webapps/ROOT/WEB-INF/classes/application.properties
