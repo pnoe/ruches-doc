@@ -11,11 +11,12 @@ services:
     depends_on:
       - postgres
   postgres:
-    build: ./ruches_postgres
+    image: postgres:alpine
     environment:
       POSTGRES_PASSWORD: postgres
     volumes: 
     - "pgdata:/var/lib/postgresql/data"
+    - ./ruches.sql:/docker-entrypoint-initdb.d/ruches.sql
 volumes:
   pgdata:
   tomcatruches:
