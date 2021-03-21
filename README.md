@@ -75,6 +75,7 @@ Prérequis : les ruches et les hausses doivent être identifiées par un nom.
     * Afficher latitude/longitude
     * Date décalée pour saisie des événements après visite
 * Infos affiche des statistiques et des alertes permettant de prévoir des actions correctives à réaliser.
+* Dump de le base de données et mise à jour de l'application
 
 
 Les événements permettent de saisir avec une date les actions qui ont été réalisées dans les ruchers. Ces événements peuvent être saisis après visite en utilisant la date décalée (menu préférences), évitant ainsi de saisir une date pour chaque événement.

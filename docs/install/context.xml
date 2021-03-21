@@ -10,7 +10,12 @@
   <Parameter name="ign.data.key" value="qsdfqreqffefesf"/>
   <Parameter name="gg.map.key" value="sqfererghthsez"/>
   <Parameter name="openweathermap.key" value="qgtrhytyk"/>
+  <Parameter name="logging.level.ooioo" value="INFO"/>
+  <Parameter name="logging.file.name" value="${catalina.base}/logs/ruches.log"/>
+  <Parameter name="git.url" value="https://gitlab.com/ruches/ruches.git"/>
+  <Parameter name="tomcat.webapps.path" value="${catalina.base}/webapps/"/>
   <Parameter name="logging.file" value="${catalina.base}/ruches.log"/>
   <Parameter name="spring.resources.cache.cachecontrol.max-age" value="7d" />
   <Parameter name="rucher.butinage.rayons" value="750,1500,3000,6000" />
+  <Parameter name="hausse.reste.miel" value="1" />
 </Context>
