@@ -49,6 +49,7 @@
 -- ign.data.key : la clé de connexion à l'API IGN
 -- gg.map.key : la clé de connexion à l'API Google maps
 -- gg.map.url : l'URL de connexion à l'API Google maps
+-- openweathermap.key : la clé de connexion à l'API openWeatherMap
 
 - Authentification voir table Personne
  Un utilisateur "admin", mot de passe "admin" est défini dans ruches_donnees_min.sql
@@ -77,6 +78,11 @@
       	service itinéraire
       https://depot.ign.fr/geoportail/api/develop/tech-docs-js/webmaster/layers.html
       
+- API OpenWeatherMap
+  https://openweathermap.org/appid
+  https://mvnrepository.com/artifact/net.aksingh/owm-japis (voir pom.xml)
+  https://bitbucket.org/aksinghnet/owm-japis
+
 
 - Composants opensource utilisés :
   -- d3 pour les graphes de descendances des essaims https://d3js.org
