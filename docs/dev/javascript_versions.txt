@@ -47,7 +47,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
         https://github.com/DataTables/DataTables
         https://datatables.net/forums/
         
-  -- jquery 3.5.1 http://jquery.com/download/ 
+  -- jquery 3.6.0 http://jquery.com/download/ 
    Download the compressed, production jQuery et map file sous resources/static/js
    
   -- jquery-ui 1.12.1 https://jqueryui.com/	
