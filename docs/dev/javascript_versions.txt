@@ -14,12 +14,14 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   		d3-interpolate.min-x.y.z.js à copier sous src/main/resources/static/js
   -- https://github.com/d3/d3-color/releases/tag/v2.0.0
   		d3-color.min-x.y.z.js à copier sous src/main/resources/static/js
-  -- bootstrap 4.6.0 https://getbootstrap.com/
+  -- bootstrap 5.0.1 https://getbootstrap.com/
        release notes : https://blog.getbootstrap.com/
        Download ready-to-use compiled code for Bootstrap
        bootstrap.bundle.min.js  qui inclut popper.js
        css et js déclarés dans templates/include.html
   -- datatables 1.10.24   https://datatables.net/download/index	
+       pour bootstrap 5   https://datatables.net/examples/styling/bootstrap5.html
+          dataTables.bootstrap5.min.js
           1.10.24.1 avec nouveau select 1.3.3
         Step 1 styling : Bootstrap 4  4.1.1
         Step 2 packages : DataTables (le numéro de version est affiché sur cette ligne)
