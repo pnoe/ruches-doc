@@ -19,22 +19,22 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
        Download ready-to-use compiled code for Bootstrap
        bootstrap.bundle.min.js  qui inclut popper.js
        css et js déclarés dans templates/include.html
-  -- datatables 1.10.24   https://datatables.net/download/index	
+  -- datatables 1.10.25   https://datatables.net/download/index	
        pour bootstrap 5   https://datatables.net/examples/styling/bootstrap5.html
-          ajout de dataTables.bootstrap5.min.js il faut garder bootstrap 4 styling
-          1.10.24.1 avec nouveau select 1.3.3
+                         https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js
+          ajout de dataTables.bootstrap5.min-X.Y.Z.js il faut garder bootstrap 4 styling
         Step 1 styling : Bootstrap 4  4.1.1
         Step 2 packages : DataTables (le numéro de version est affiché sur cette ligne)
         Extensions : 
-          Buttons 1.7.0 :
-            Column visibility 1.7.0
-            HTML5 export 1.7.0
+          Buttons 1.7.1 :
+            Column visibility 1.7.1
+            HTML5 export 1.7.1
               pdfmake 0.1.36
-            Print view 1.7.0
-          FixedHeader 3.1.8
-          Responsive 2.2.7
-          RowGroup 1.1.2
-          RowReorder 1.2.7 (utilisé par rucheAjoutRetrait.html)
+            Print view 1.7.1
+          FixedHeader 3.1.9
+          Responsive 2.2.8
+          RowGroup 1.1.3
+          RowReorder 1.2.8 (utilisé par rucheAjoutRetrait.html)
           Select 1.3.3
         Step 3 onglet Download  Minify et Concatenate
            Download files
@@ -59,7 +59,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   -- jquery.validate 1.19.3 https://jqueryvalidation.org/
        voir aussi localization/messages_fr.min.js à copier en js/jquery.validate-1.19.3-messages_fr.min.js
   -- graphiques (camembert recolteStat.html) 
-    chartjs 3.2.1.js
+    chartjs 3.3.2.js
     http://www.chartjs.org/ https://github.com/chartjs/Chart.js 
     https://github.com/chartjs/Chart.js/releases/
       copier le fichier chart.min.js sous resources/static/js/chart.min-x.y.z.js
