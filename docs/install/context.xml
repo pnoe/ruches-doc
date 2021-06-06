@@ -4,6 +4,7 @@
 		name="jdbc/ruches" url="jdbc:postgresql://localhost:5432/ruchesmin"
 		username="postgres" password="postgres"
 		driverClassName="org.postgresql.Driver" />
+  <Resources cacheMaxSize="15360" />
   <Parameter name="accueil.titre" value="Les Abeilles de la bas"/>
   <Parameter name="proxyHost" value="xxxx"/>
   <Parameter name="proxyPort" value="8080"/>
