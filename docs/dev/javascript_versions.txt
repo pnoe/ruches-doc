@@ -19,11 +19,9 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
        Download ready-to-use compiled code for Bootstrap
        bootstrap.bundle.min.js  qui inclut popper.js
        css et js déclarés dans templates/include.html
-  -- datatables 1.10.25   https://datatables.net/download/index	
-       pour bootstrap 5   https://datatables.net/examples/styling/bootstrap5.html
-                         https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js
-          ajout de dataTables.bootstrap5.min-X.Y.Z.js il faut garder bootstrap 4 styling
-        Step 1 styling : Bootstrap 4  4.1.1
+  -- datatables 1.10.25.1 (.1 pour maj bootstrap 5)
+  		   https://datatables.net/download/index	
+        Step 1 styling : Bootstrap 5  5.0.1
         Step 2 packages : DataTables (le numéro de version est affiché sur cette ligne)
         Extensions : 
           Buttons 1.7.1 :
@@ -32,7 +30,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
               pdfmake 0.1.36
             Print view 1.7.1
           FixedHeader 3.1.9
-          Responsive 2.2.8
+          Responsive 2.2.9
           RowGroup 1.1.3
           RowReorder 1.2.8 (utilisé par rucheAjoutRetrait.html)
           Select 1.3.3
@@ -48,6 +46,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
       voir aussi : https://github.com/DataTables/Buttons
         https://github.com/DataTables/DataTables
         https://datatables.net/forums/
+      Supprimé les datatables.js et .css en ne gardant que les fichiers .min
         
   -- jquery 3.6.0 http://jquery.com/download/ 
    Download the compressed, production jQuery et map file sous resources/static/js
@@ -74,6 +73,8 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
     ol-6.3.1.js  http://openlayers.org/ https://libraries.io/npm/openlayers
   -- Extension Géoportail pour OpenLayers (cartes ign et osm)
       version 3.0.13  GpPluginOpenLayers.js et GpPluginOpenLayers.css
+        3.0.13.1 avec merge de la pull request "upgrade to ol6"
+        supprimé les fichiers src
     https://geoservices.ign.fr/documentation/utilisation_web/extension-ol3.html
     https://github.com/IGNF/geoportal-extensions/releases
     https://github.com/IGNF/geoportal-extensions/issues/217
