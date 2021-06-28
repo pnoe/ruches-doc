@@ -14,7 +14,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   		d3-interpolate.min-x.y.z.js à copier sous src/main/resources/static/js
   -- https://github.com/d3/d3-color/releases/tag/v2.0.0
   		d3-color.min-x.y.z.js à copier sous src/main/resources/static/js
-  -- bootstrap 5.0.1 https://getbootstrap.com/
+  -- bootstrap 5.0.2 https://getbootstrap.com/
        release notes : https://blog.getbootstrap.com/
        Download ready-to-use compiled code for Bootstrap
        bootstrap.bundle.min.js  qui inclut popper.js
@@ -58,7 +58,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   -- jquery.validate 1.19.3 https://jqueryvalidation.org/
        voir aussi localization/messages_fr.min.js à copier en js/jquery.validate-1.19.3-messages_fr.min.js
   -- graphiques (camembert recolteStat.html) 
-    chartjs 3.3.2.js
+    chartjs 3.4.0.js
     http://www.chartjs.org/ https://github.com/chartjs/Chart.js 
     https://github.com/chartjs/Chart.js/releases/
       copier le fichier chart.min.js sous resources/static/js/chart.min-x.y.z.js
@@ -99,7 +99,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
     	moment-with-locales.min-2.29.1.js
     
   
-  -- icones
-    open-iconic 1.1.0 https://useiconic.com/open
+  -- icones bootstrap-icons-1.5.0
+    https://github.com/twbs/icons/releases/
   
 
