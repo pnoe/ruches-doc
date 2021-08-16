@@ -19,7 +19,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
           charger le fichier sous :
           https://cdn.jsdelivr.net/npm/d3-color@3
   		d3-color.min-x.y.z.js à copier sous src/main/resources/static/js
-  -- bootstrap 5.0.2 https://getbootstrap.com/
+  -- bootstrap 5.1.0 https://getbootstrap.com/
        release notes : https://blog.getbootstrap.com/
        Download ready-to-use compiled code for Bootstrap
        bootstrap.bundle.min.js  qui inclut popper.js
@@ -63,7 +63,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   -- jquery.validate 1.19.3 https://jqueryvalidation.org/
        voir aussi localization/messages_fr.min.js à copier en js/jquery.validate-1.19.3-messages_fr.min.js
   -- graphiques (camembert recolteStat.html) 
-    chartjs 3.4.1.js
+    chartjs 3.5.0.js
     http://www.chartjs.org/ https://github.com/chartjs/Chart.js 
     https://github.com/chartjs/Chart.js/releases/
       copier le fichier chart.min.js sous resources/static/js/chart.min-x.y.z.js
@@ -73,12 +73,9 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   		https://github.com/xdan/datetimepicker/releases
   
   -- openlayers (cartes ign et osm)   
-  Attention avec la version 6.4.0 à 6.4.3 le lien vers les outils ign n'est plus actif
-       voir https://github.com/IGNF/geoportal-extensions/pull/280/files
-    ol-6.3.1.js  http://openlayers.org/ https://libraries.io/npm/openlayers
+    ol-6.6.1.js  http://openlayers.org/ https://libraries.io/npm/openlayers
   -- Extension Géoportail pour OpenLayers (cartes ign et osm)
-      version 3.0.13  GpPluginOpenLayers.js et GpPluginOpenLayers.css
-        3.0.13.1 avec merge de la pull request "upgrade to ol6"
+      version 3.1.0  GpPluginOpenLayers.js et GpPluginOpenLayers.css
         supprimé les fichiers src
     https://geoservices.ign.fr/documentation/utilisation_web/extension-ol3.html
     https://github.com/IGNF/geoportal-extensions/releases

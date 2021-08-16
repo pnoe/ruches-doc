@@ -83,7 +83,6 @@
   https://mvnrepository.com/artifact/net.aksingh/owm-japis (voir pom.xml)
   https://bitbucket.org/aksinghnet/owm-japis
 
-
 - Composants opensource utilisés :
   -- d3 pour les graphes de descendances des essaims https://d3js.org
   -- Bootstrap responsive design https://getbootstrap.com
@@ -95,6 +94,8 @@
   -- jquery.datetimepicker https://xdsoft.net/jqplugins/datetimepicker
   -- cartes ign https://github.com/IGNF/geoportal-extensions
   -- openlayers http://openlayers.org (pour geoportal-extensions)
-  -- open-iconic https://useiconic.com/open
   -- spring boot https://projects.spring.io/spring-boot
-  -- owm-japis météo https://mvnrepository.com/artifact/net.aksingh/owm-japis
+ - API utilisées
+  -- OpenWeatherMap
+  -- Google maps 
+  
