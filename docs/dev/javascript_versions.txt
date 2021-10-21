@@ -4,7 +4,7 @@ Comment mettre à jour les packages javascript :
 Copier les fichiers dans le répertoire : src/main/resources/static/js
 Mettre à jour les versions dans src/main/resources/templates/include.html
  
-  -- d3 7.0.1 pour les graphes de decendances des essaims
+  -- d3 7.1.1 pour les graphes de decendances des essaims
        	 https://d3js.org/ chercher d3.zip  d3.min.js à renommer avec la version
          d3.min-x.y.z.js à copier sous src/main/resources/static/js
   -- d3-scale-chromatic d3-interpolate et d3-color pour la couleur des graphes jsChart
@@ -57,7 +57,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   -- jquery 3.6.0 http://jquery.com/download/ 
    Download the compressed, production jQuery et map file sous resources/static/js
    
-  -- jquery-ui 1.12.1 https://jqueryui.com/	
+  -- jquery-ui 1.13.0 https://jqueryui.com/	
       Quick downloads/Stable
       https://github.com/jquery/jquery-ui/tree/master/ui/i18n
       https://api.jqueryui.com/datepicker/
@@ -74,7 +74,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   		https://github.com/xdan/datetimepicker/releases
   
   -- openlayers (cartes ign et osm)   
-    ol-6.8.1.js  http://openlayers.org/ https://libraries.io/npm/openlayers
+    ol-6.9.0.js  http://openlayers.org/ https://libraries.io/npm/openlayers
   -- Extension Géoportail pour OpenLayers (cartes ign et osm)
       version 3.1.0  GpPluginOpenLayers.js et GpPluginOpenLayers.css
         supprimé les fichiers src
@@ -83,11 +83,11 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
     https://github.com/IGNF/geoportal-extensions/issues/217
     https://www.developpez.net/forums/f1255/applications/sig-systeme-d-information-geographique/ign-api-geoportail/
   -- export png et pdf des cartes ign et osm
-    dom-to-image-2.8.0 https://www.npmjs.com/package/dom-to-image-more
-      dans un terminal bash : bower install dom-to-image-more
-      puis copier bower_components/dom-to-image-more/dist/dom-to-image-more.min.js
-      
-    jspdf-2.3.1 https://github.com/MrRio/jsPDF (pour export pdf de la carte OSM des ruches d'un rucher)
+    dom-to-image-2.8.0 
+    	https://github.com/1904labs/dom-to-image-more/releases
+    
+    jspdf-2.4.0 https://github.com/MrRio/jsPDF (pour export pdf de la carte OSM des ruches d'un rucher)
+       copier les 2 fichiers dist/umd.min.js et umd.min.js.map
        version en commentaire dans le fichier jsPDF/dist/jspdf.min.js
        après version 2.1.1 ajouter : const { jsPDF } = window.jspdf;
        
@@ -102,7 +102,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
     	moment-with-locales.min-2.29.1.js
     
   
-  -- icones bootstrap-icons-1.5.0
+  -- icones bootstrap-icons-1.6.0
     https://github.com/twbs/icons/releases/
   
 
