@@ -1,4 +1,4 @@
-FROM tomcat:jdk16
+FROM tomcat:jdk17
 # spring ne fonctionne pas avec Tomcat 10
 ARG MAVEN_VERSION=3.6.3
 ARG USER_HOME_DIR="/root"

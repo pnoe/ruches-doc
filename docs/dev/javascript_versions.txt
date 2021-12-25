@@ -39,7 +39,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
           Responsive 2.2.9
           RowGroup 1.1.4
           RowReorder 1.2.8 (utilisé par rucheAjoutRetrait.html)
-          Select 1.3.3
+          Select 1.3.4
         Step 3 onglet Download  Minify et Concatenate
            Download files
           copier datatables.min.css et datatables.min.js dans resources/static/js/datatables-x.y.z
