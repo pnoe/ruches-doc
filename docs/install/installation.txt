@@ -1,12 +1,23 @@
-- Installation des paquets sur un server debian
+- Installation des paquets sur un serveur debian
   apt update
   apt upgrade -y
   # installation de apache, tomcat, la lib pour tomcat native apr, postgres
   #   le parefeu ufw et sudo
   # git, jdk, maven pour une génération locale du fichier war à partir des sources clonées
-  apt install -y --no-install-recommends git default-jdk maven \
-    apache2 tomcat9 libtcnative-1 ufw sudo xz-utils curl postgresql
+  apt install -y --no-install-recommends git openjdk-17-jdk maven \
+    apache2 tomcat9 libtcnative-1 ufw sudo xz-utils curl postgresql \
+    ntp
   apt clean
+
+- ntp pour que le serveur reste à l'heure
+  # ntp déclaration du serveur ntp.ovh.net
+  sed -i '/^#server ntp.*/a server ntp.ovh.net' /etc/ntp.conf
+  
+- timezone
+	timedatectl list-timezones | grep Paris
+		Europe/Paris
+	timedatectl set-timezone Europe/Paris
+	ls /etc/localtime -l
 
 - Configuration minimale du parefeu.
   On autorise tous les appels sortants et uniquement les appels entrants ssh, http et https
@@ -17,6 +28,8 @@
   /usr/sbin/ufw allow 443
   
 - Configuration apache
+	# suppression des activations existantes
+	rm /etc/apache2/sites-enabled/*
     Copier le fichier docs/installation/vhost.conf sous /etc/apache2/sites-available
     Activation de ce fichier :
     /usr/sbin/a2ensite vhost.conf
@@ -62,26 +75,22 @@
  
     
 - Carte IGN
- L'extension géoportail pour openlayers 4
- https://geoservices.ign.fr/documentation/utilisation_web/extension-ol.html
- https://github.com/IGNF/geoportal-extensions
- http://ignf.github.io/geoportal-extensions/openlayers-2.0.0/jsdoc/
- -- L'affichage de ces cartes nécessite une clé :
-      ign.data.key dans application.properties
-      https://geoservices.ign.fr/documentation/diffusion/formulaire-de-commande-geoservices.html
-	  https://www.sphinxonline.com/SurveyServer/s/etudesmk/Geoservices/questionnaire.htm
-      Demander l'accès aux couches suivantes :
-      	ORTHOIMAGERY.ORTHOPHOTOS orthophos
-      	GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN-EXPRESS.STANDARD scan express standard 
-      	CADASTRALPARCELS.PARCELS parcelles cadastrales
-      	service altitudes pour interrogation altitude d'un point et profil
-      	service itinéraire
-      https://depot.ign.fr/geoportail/api/develop/tech-docs-js/webmaster/layers.html
+https://geoservices.ign.fr/
+	connexion
+	créer nouveau login ign
+Créer une clé de service web :
+	mon compte / mes clés de service web
+	sélectionner usage gratuit des scan25/100/OACI
+    mettre dans le fichier context.xml : 
+    	ign.data.key="ortho,parcellaire,laclecréée"
+voir aussi :
+https://geoservices.ign.fr/services-web
+https://geoservices.ign.fr/services-web-issus-des-scans-ign
+https://github.com/IGNF/geoportal-extensions/blob/develop/doc/README-openlayers.md
       
 - API OpenWeatherMap
   https://openweathermap.org/appid
-  https://mvnrepository.com/artifact/net.aksingh/owm-japis (voir pom.xml)
-  https://bitbucket.org/aksinghnet/owm-japis
+  créer une clé et copier cette clé dans le fichier context.xml
 
 - Composants opensource utilisés :
   -- d3 pour les graphes de descendances des essaims https://d3js.org
@@ -93,8 +102,9 @@
   -- chartjs graphiques javascript http://www.chartjs.org 
   -- jquery.datetimepicker https://xdsoft.net/jqplugins/datetimepicker
   -- cartes ign https://github.com/IGNF/geoportal-extensions
-  -- openlayers http://openlayers.org (pour geoportal-extensions)
+  -- openlayers http://openlayers.org (pour l'affichage des cartes IGN et OSM)
   -- spring boot https://projects.spring.io/spring-boot
+  -- ortools pour le calcul du parcours des ruches https://developers.google.com/optimization
  - API utilisées
   -- OpenWeatherMap
   -- Google maps 
