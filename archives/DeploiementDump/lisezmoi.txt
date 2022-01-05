@@ -1,0 +1,5 @@
+Ce dossier contient les fichiers de l'application Ruches pour le déploiement 
+de l'application par le menu Admin/Déploie et le téléchargement des dumps.
+AdminController.java contient le code,
+include.html les appels dans le menu,
+application.properties les chemins des webapps, l'url de git...
