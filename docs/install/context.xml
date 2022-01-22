@@ -8,7 +8,7 @@
   <Parameter name="accueil.titre" value="Les Abeilles de la bas"/>
   <Parameter name="proxyHost" value="xxxx"/>
   <Parameter name="proxyPort" value="8080"/>
-  <Parameter name="ign.data.key" value="ortho,parcellaire,qsdfqreqffefesf"/>
+  <Parameter name="ign.data.key" value="ortho,parcellaire,agriculture,qsdfqreqffefesf"/>
   <Parameter name="gg.map.key" value="sqfererghthsez"/>
   <Parameter name="openweathermap.key" value="qgtrhytyk"/>
   <Parameter name="logging.level.ooioo" value="INFO"/>
