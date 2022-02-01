@@ -24,16 +24,16 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
        bootstrap.bundle.min.js qui inclut popper.js
          ainsi que bootstrap.min.css et les fichiers .map
        css et js déclarés dans templates/include.html
-  -- datatables 1.11.3_1
+  -- datatables 1.11.4
   		   https://datatables.net/download/index	
         Step 1 styling : Bootstrap 5  5.0.1
         Step 2 packages : DataTables (le numéro de version est affiché sur cette ligne)
         Extensions (10 éléments à cocher) : 
           Buttons 2.2.1 :
-            Column visibility 2.2.1
-            HTML5 export 2.2.1
+            Column visibility 2.2.2
+            HTML5 export 2.2.2
               pdfmake 0.1.36
-            Print view 2.2.1	
+            Print view 2.2.2	
           FixedHeader 3.2.1
           Responsive 2.2.9
           RowGroup 1.1.4
@@ -74,7 +74,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
     ol-6.12.0  http://openlayers.org/ https://libraries.io/npm/openlayers
        copier ol.css et ol.js dans js/ol-x.y.z
   -- Extension Géoportail pour OpenLayers (cartes ign et osm)
-      version 3.2.6  GpPluginOpenLayers.js et GpPluginOpenLayers.css
+      version 3.2.7  GpPluginOpenLayers.js et GpPluginOpenLayers.css
         supprimé les fichiers src
     https://geoservices.ign.fr/documentation/utilisation_web/extension-ol3.html
     https://github.com/IGNF/geoportal-extensions/releases
@@ -94,7 +94,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   -- moment (pour jquery-date-range-picker)
     	https://momentjs.com/
     	moment-with-locales.min-2.29.1.js
-  -- icones bootstrap-icons-1.7.2
+  -- icones bootstrap-icons-1.8.0
     https://github.com/twbs/icons/releases/
   
 
