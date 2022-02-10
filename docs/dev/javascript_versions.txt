@@ -94,7 +94,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   -- moment (pour jquery-date-range-picker)
     	https://momentjs.com/
     	moment-with-locales.min-2.29.1.js
-  -- icones bootstrap-icons-1.8.0
+  -- icones bootstrap-icons-1.8.1
     https://github.com/twbs/icons/releases/
   
 

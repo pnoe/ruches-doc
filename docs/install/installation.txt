@@ -75,14 +75,17 @@
  
     
 - Carte IGN
-https://geoservices.ign.fr/
+  https://geoservices.ign.fr/
 	connexion
 	créer nouveau login ign
-Créer une clé de service web :
+  Créer une clé de service web :
 	mon compte / mes clés de service web
 	sélectionner usage gratuit des scan25/100/OACI
     mettre dans le fichier context.xml : 
     	ign.data.key="ortho,parcellaire,laclecréée"
+  Création d'un fichier autoconf :
+    curl "https://wxs.ign.fr/ortho/autoconf?keys=parcellaire,agriculture,essentiels,maclé&output=json&callback=callback" > autoconf.js
+    
 voir aussi :
 https://geoservices.ign.fr/services-web
 https://geoservices.ign.fr/services-web-issus-des-scans-ign
