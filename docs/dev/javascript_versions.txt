@@ -24,17 +24,17 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
        bootstrap.bundle.min.js qui inclut popper.js
          ainsi que bootstrap.min.css et les fichiers .map
        css et js déclarés dans templates/include.html
-  -- datatables 1.11.4
+  -- datatables 1.11.5
   		   https://datatables.net/download/index	
         Step 1 styling : Bootstrap 5  5.0.1
         Step 2 packages : DataTables (le numéro de version est affiché sur cette ligne)
         Extensions (10 éléments à cocher) : 
-          Buttons 2.2.1 :
+          Buttons 2.2.2 :
             Column visibility 2.2.2
             HTML5 export 2.2.2
               pdfmake 0.1.36
             Print view 2.2.2	
-          FixedHeader 3.2.1
+          FixedHeader 3.2.2
           Responsive 2.2.9
           RowGroup 1.1.4
           RowReorder 1.2.8 (utilisé par rucheAjoutRetrait.html)
@@ -71,7 +71,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   		https://github.com/xdan/datetimepicker
   		https://github.com/xdan/datetimepicker/releases
   -- openlayers (cartes ign et osm)   
-    ol-6.12.0  http://openlayers.org/ https://libraries.io/npm/openlayers
+    ol-6.13.0  http://openlayers.org/ https://libraries.io/npm/openlayers
        copier ol.css et ol.js dans js/ol-x.y.z
   -- Extension Géoportail pour OpenLayers (cartes ign et osm)
       version 3.2.7  GpPluginOpenLayers.js et GpPluginOpenLayers.css
