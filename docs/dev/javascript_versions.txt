@@ -3,7 +3,7 @@
 Copier les fichiers dans le répertoire : src/main/resources/static/js
 Mettre à jour les versions dans src/main/resources/templates/include.html
  
-  -- d3 7.3.0 pour les graphes de decendances des essaims
+  -- d3 7.4.4 pour les graphes de decendances des essaims
        	 https://d3js.org/ chercher d3.zip  d3.min.js à renommer avec la version
          d3.min-x.y.z.js à copier sous src/main/resources/static/js
   -- d3-scale-chromatic d3-interpolate et d3-color pour la couleur des graphes jsChart
@@ -13,32 +13,31 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   -- https://github.com/d3/d3-interpolate/releases/tag/v3.0.1
         https://cdn.jsdelivr.net/npm/d3-interpolate@3
   		d3-interpolate.min-x.y.z.js à copier sous src/main/resources/static/js
-  -- https://github.com/d3/d3-color/releases/tag/v3.0.1
+  -- https://github.com/d3/d3-color/releases/tag/v3.1.0
         Download, https://github.com/d3/d3-color#installing
-          charger le fichier sous :
-          https://cdn.jsdelivr.net/npm/d3-color@3
+          wget https://cdn.jsdelivr.net/npm/d3-color@3 renommer en
   		d3-color.min-x.y.z.js à copier sous src/main/resources/static/js
   -- bootstrap 5.1.3 https://getbootstrap.com/
        release notes : https://blog.getbootstrap.com/
        Download ready-to-use compiled code for Bootstrap
        bootstrap.bundle.min.js qui inclut popper.js
-         ainsi que bootstrap.min.css et les fichiers .map
+         ainsi que bootstrap.min.css
        css et js déclarés dans templates/include.html
-  -- datatables 1.11.5
+  -- datatables 1.12.0
   		   https://datatables.net/download/index	
-        Step 1 styling : Bootstrap 5  5.0.1
+        Step 1 styling : Bootstrap 5  5.1.3
         Step 2 packages : DataTables (le numéro de version est affiché sur cette ligne)
         Extensions (10 éléments à cocher) : 
-          Buttons 2.2.2 :
-            Column visibility 2.2.2
-            HTML5 export 2.2.2
+          Buttons 2.2.3 :
+            Column visibility 2.2.3
+            HTML5 export 2.2.3
               pdfmake 0.1.36
-            Print view 2.2.2	
-          FixedHeader 3.2.2
-          Responsive 2.2.9
-          RowGroup 1.1.4
+            Print view 2.2.3
+          FixedHeader 3.2.3
+          Responsive 2.3.0
+          RowGroup 1.2.0
           RowReorder 1.2.8 (utilisé par rucheAjoutRetrait.html)
-          Select 1.3.4
+          Select 1.4.0
         Step 3 onglet Download  Minify et Concatenate
            Download files
           copier datatables.min.css et datatables.min.js dans resources/static/js/datatables-x.y.z
@@ -63,7 +62,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   -- jquery.validate 1.19.3 https://jqueryvalidation.org/
        voir aussi localization/messages_fr.min.js à copier en js/jquery.validate-1.19.3-messages_fr.min.js
   -- graphiques (camembert recolteStat.html) 
-    chartjs 3.7.0.js
+    chartjs 3.7.1.js
     http://www.chartjs.org/ https://github.com/chartjs/Chart.js 
     https://github.com/chartjs/Chart.js/releases/
       copier le fichier chart.min.js sous resources/static/js/chart.min-x.y.z.js
@@ -71,17 +70,17 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   		https://github.com/xdan/datetimepicker
   		https://github.com/xdan/datetimepicker/releases
   -- openlayers (cartes ign et osm)   
-    ol-6.13.0  http://openlayers.org/ https://libraries.io/npm/openlayers
+    ol-6.14.1  http://openlayers.org/ https://libraries.io/npm/openlayers
        copier ol.css et ol.js dans js/ol-x.y.z
   -- Extension Géoportail pour OpenLayers (cartes ign et osm)
-      version 3.2.7  GpPluginOpenLayers.js et GpPluginOpenLayers.css
+      version 3.2.13  GpPluginOpenLayers.js et GpPluginOpenLayers.css
         supprimé les fichiers src
     https://geoservices.ign.fr/documentation/utilisation_web/extension-ol3.html
     https://github.com/IGNF/geoportal-extensions/releases
     https://github.com/IGNF/geoportal-extensions/issues/217
     https://www.developpez.net/forums/f1255/applications/sig-systeme-d-information-geographique/ign-api-geoportail/
   -- export png et pdf des cartes ign et osm
-    dom-to-image-2.9.5 (pour export png rucher détail)
+    dom-to-image-2.10.1 (pour export png rucher détail)
     	https://github.com/1904labs/dom-to-image-more/releases
   -- jspdf-2.5.0 https://github.com/MrRio/jsPDF (pour export pdf de la carte OSM des ruches d'un rucher)
        copier dist/umd.min.js
@@ -94,7 +93,8 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   -- moment (pour jquery-date-range-picker)
     	https://momentjs.com/
     	moment-with-locales.min-2.29.1.js
-  -- icones bootstrap-icons-1.8.1
+  -- icones bootstrap-icons-1.8.1 à mettre dans resources/staitc/images
+    et chargement css dans include.html
     https://github.com/twbs/icons/releases/
   
 
