@@ -11,6 +11,10 @@ D'autres événements sont créés lorsque l'on effectue certaines actions :
 - Retrait d'une hausse d'une ruche
 - Dispersion d'un essaim
 
+Les événements Commentaire permettent aussi de planifier des tâches a exécuter. Il suffit pour cela 
+de saisir dans le formulaire de création une date future et de renseigner le champ Notifications avec
+le nombre de jour avant cette date ou des mails seront envoyés aux destinataires.
+
 1 - Listez tous les Événements : cliquez sur le menu "Évenements/Tous".
   Si vous avez déplacé votre première ruche dans un rucher, vous devez avoir dans le tableau une ligne :
     Date		Événement		Ruche		Essaim		Rucher
