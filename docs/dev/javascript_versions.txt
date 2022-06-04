@@ -23,7 +23,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
        bootstrap.bundle.min.js qui inclut popper.js
          ainsi que bootstrap.min.css
        css et js déclarés dans templates/include.html
-  -- datatables 1.12.0
+  -- datatables 1.12.1
   		   https://datatables.net/download/index	
         Step 1 styling : Bootstrap 5  5.1.3
         Step 2 packages : DataTables (le numéro de version est affiché sur cette ligne)
@@ -62,7 +62,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   -- jquery.validate 1.19.3 https://jqueryvalidation.org/
        voir aussi localization/messages_fr.min.js à copier en js/jquery.validate-1.19.3-messages_fr.min.js
   -- graphiques (camembert recolteStat.html) 
-    chartjs 3.7.1.js
+    chartjs 3.8.0.js
     http://www.chartjs.org/ https://github.com/chartjs/Chart.js 
     https://github.com/chartjs/Chart.js/releases/
       copier le fichier chart.min.js sous resources/static/js/chart.min-x.y.z.js
@@ -92,9 +92,14 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
     	jquery-date-range-picker-0.21.1
   -- moment (pour jquery-date-range-picker)
     	https://momentjs.com/
-    	moment-with-locales.min-2.29.1.js
-  -- icones bootstrap-icons-1.8.1 à mettre dans resources/staitc/images
+    	moment-with-locales.min-2.29.3.js
+  -- icones bootstrap-icons-1.8.2 à mettre dans resources/staitc/images
     et chargement css dans include.html
     https://github.com/twbs/icons/releases/
+    
+  -- https://github.com/erikflowers/weather-icons
+   version 2.0.12
+   extraire 2 css min et font dans css/weather-icons-version css et font
+    voir rucherMeteo.html (ainsi que pour https://api.openweathermap.org)
   
 
