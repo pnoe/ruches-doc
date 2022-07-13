@@ -59,7 +59,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
       Quick downloads/Stable
       https://github.com/jquery/jquery-ui/tree/master/ui/i18n
       https://api.jqueryui.com/datepicker/
-  -- jquery.validate 1.19.3 https://jqueryvalidation.org/
+  -- jquery.validate 1.19.5 https://jqueryvalidation.org/
        voir aussi localization/messages_fr.min.js à copier en js/jquery.validate-1.19.3-messages_fr.min.js
   -- graphiques (camembert recolteStat.html) 
     chartjs 3.8.0.js
@@ -92,7 +92,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
     	jquery-date-range-picker-0.21.1
   -- moment (pour jquery-date-range-picker)
     	https://momentjs.com/
-    	moment-with-locales.min-2.29.3.js
+    	moment-with-locales.min-2.29.4.js
   -- icones bootstrap-icons-1.8.2 à mettre dans resources/staitc/images
     et chargement css dans include.html
     https://github.com/twbs/icons/releases/
