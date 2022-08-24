@@ -62,7 +62,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   -- jquery.validate 1.19.5 https://jqueryvalidation.org/
        voir aussi localization/messages_fr.min.js à copier en js/jquery.validate-1.19.3-messages_fr.min.js
   -- graphiques (camembert recolteStat.html) 
-    chartjs 3.8.2.js
+    chartjs 3.9.0
     http://www.chartjs.org/ https://github.com/chartjs/Chart.js 
     https://github.com/chartjs/Chart.js/releases/
       copier le fichier chart.min.js sous resources/static/js/chart.min-x.y.z.js
@@ -70,10 +70,15 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
   		https://github.com/xdan/datetimepicker
   		https://github.com/xdan/datetimepicker/releases
   -- openlayers (cartes ign et osm)   
-    ol-6.14.1  http://openlayers.org/ https://libraries.io/npm/openlayers
+    ol-6.15.1  http://openlayers.org/ https://libraries.io/npm/openlayers
        copier ol.css et ol.js dans js/ol-x.y.z
-  -- Extension Géoportail pour OpenLayers (cartes ign et osm)
-      version 3.2.13  GpPluginOpenLayers.js et GpPluginOpenLayers.css
+       ol-7.0.0 incompatible avec Extension Géoportail 3.2.14
+         Uncaught TypeError: class constructors must be invoked with 'new' (LayerSwitcher Controll.call...)
+         A changer dans code Ruches (defaults -> defaults.defaults) :
+           interactions: ol.interaction.defaults.defaults({ doubleClickZoom: false }).extend([select, translate]),
+		   controls: ol.control.defaults.defaults({
+  -- IGN Extension Géoportail pour OpenLayers (cartes ign et osm)
+      version 3.2.14  GpPluginOpenLayers.js et GpPluginOpenLayers.css
         supprimé les fichiers src
     https://geoservices.ign.fr/documentation/utilisation_web/extension-ol3.html
     https://github.com/IGNF/geoportal-extensions/releases
