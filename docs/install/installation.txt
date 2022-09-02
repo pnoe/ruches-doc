@@ -1,3 +1,7 @@
+Pour une installation locale on peut se passer
+ - du pare-feu uvw
+ - du frontal apache2 et appeler directement tomcat (http://localhost:8080/ruches)
+
 - Installation des paquets sur un serveur debian
   apt update
   apt upgrade -y
@@ -46,6 +50,8 @@
   git clone https://gitlab.com/ooioo/ruches.git
   cd ruches
   mvn clean package -DskipTests
+- Copie du war sous tomcat
+  cp target/ruches.war.original /var/lib/tomcat9/webapps/ruches.war
 
 - Créer la base initiale :
     psql -c 'drop database ruches;'
@@ -111,4 +117,7 @@ https://github.com/IGNF/geoportal-extensions/blob/develop/doc/README-openlayers.
  - API utilisées
   -- OpenWeatherMap
   -- Google maps 
+  -- Cartes et service IGN
+  -- Cartes OpenStreetMap
+  
   
