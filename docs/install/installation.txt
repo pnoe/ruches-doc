@@ -47,7 +47,7 @@ Pour une installation locale on peut se passer
    Copier le fichier docs/installation/context.xml sous /etc/tomcat9/Catalina/localhost/
  
 - Clone des sources puis création du fichier war
-  git clone https://gitlab.com/ooioo/ruches.git
+  git clone https://gitlab.com/ruches/ruches.git
   cd ruches
   mvn clean package -DskipTests
 - Copie du war sous tomcat
@@ -58,6 +58,7 @@ Pour une installation locale on peut se passer
     psql -c 'create database ruches;'
     psql -f sql/structure.sql ruches
     psql -f sql/ruches_donnees_min.sql ruches
+    psql -c "alter user postgres with password 'postgres';"
 - Définir les paramètres de l'application dans les fichiers 
     src/main/resources/application.properties
     et dans le context.xml Tomcat (voir exemple de context dans le répertoire docs/installation)
