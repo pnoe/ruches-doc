@@ -1,6 +1,12 @@
 Pour une installation locale on peut se passer
  - du pare-feu uvw
  - du frontal apache2 et appeler directement tomcat (http://localhost:8080/ruches)
+On peut aussi installer ruches, tomcat et postgres avec Docker voir repository ruches-doc/docker
+On peut aussi ne pas installer tomcat et utiliser le tomcat "embedded" de spring boot, il faut :
+ - modifier application.properties pour décommenter les paramètres de connexion à la base de données
+   en adaptant host, port, username et password et mettre en commentaire le paramètre de connexion jndi, 
+   puis lancer l'application : /apache-maven-3.8.6/bin/mvn spring-boot:run
+    
 
 - Installation des paquets sur un serveur debian
   apt update
@@ -9,12 +15,12 @@ Pour une installation locale on peut se passer
   #   le parefeu ufw et sudo
   # git, jdk, maven pour une génération locale du fichier war à partir des sources clonées
   apt install -y --no-install-recommends git openjdk-17-jdk maven \
-    apache2 tomcat9 libtcnative-1 ufw sudo xz-utils curl postgresql \
+    apache2 tomcat9 libtcnative-1 ufw sudo curl postgresql \
     ntp
   apt clean
 
 - ntp pour que le serveur reste à l'heure
-  # ntp déclaration du serveur ntp.ovh.net
+  # ntp pour hébergeur ovh, exemple de déclaration du serveur ntp.ovh.net
   sed -i '/^#server ntp.*/a server ntp.ovh.net' /etc/ntp.conf
   
 - timezone
