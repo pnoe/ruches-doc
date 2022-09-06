@@ -21,6 +21,20 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
+-- Name: dist_rucher; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.dist_rucher (
+    id bigint NOT NULL,
+    dist integer NOT NULL,
+    temps integer NOT NULL,
+    rucher_end_id bigint,
+    rucher_start_id bigint
+);
+
+
+ALTER TABLE public.dist_rucher OWNER TO postgres;
+--
 -- Name: essaim; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -204,6 +218,13 @@ CREATE TABLE public.rucher (
 
 ALTER TABLE public.rucher OWNER TO postgres;
 
+
+--
+-- Name: dist_rucher dist_rucher_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.dist_rucher
+    ADD CONSTRAINT dist_rucher_pkey PRIMARY KEY (id);
 --
 -- Name: essaim essaim_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
@@ -386,6 +407,21 @@ ALTER TABLE ONLY public.recolte_hausse
 
 ALTER TABLE ONLY public.recolte_hausse
     ADD CONSTRAINT fkc59g3pd6nd9ao4om9o872toms FOREIGN KEY (hausse_id) REFERENCES public.hausse(id);
+
+--
+-- Name: dist_rucher fke27cts3oeai9x6rh3semuh096; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.dist_rucher
+    ADD CONSTRAINT fke27cts3oeai9x6rh3semuh096 FOREIGN KEY (rucher_end_id) REFERENCES public.rucher(id);
+
+
+--
+-- Name: dist_rucher fke57v1i0qvofhxhm14ng43yh0c; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.dist_rucher
+    ADD CONSTRAINT fke57v1i0qvofhxhm14ng43yh0c FOREIGN KEY (rucher_start_id) REFERENCES public.rucher(id);
 
 
 --
