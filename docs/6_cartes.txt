@@ -10,16 +10,15 @@ Carte de tous les ruchers : menu "Rucher", cliquer sur "Carte Google", "Carte IG
   - Le champ Recherche permet de rechercher un rucher par son nom.
      Saisir le nom complet ou une partie du nom (non sensible à la casse).
   - Pour déplacer un rucher :
-        Le marqueur "Entrée" dans la carte de détail d'un rucher (voir ci-après) est aussi déplacé.
-        Les ruches ne sont pas déplacées.
-     -- carte Google, décocher la case "Marqueurs fixes" puis déplacer le marqueur du rucher
+     -- Décocher la case "Marqueurs fixes"
+     -- carte Google, déplacer le marqueur du rucher
         Attention quand on relache le clic la nouvelle position du rucher est enregistrée.
      -- cartes IGN ou OSM, cliquer sur le marqueur pour le sélectionner, puis le déplacer
         Attention à la fin du déplacement la nouvelle position du rucher est enregistrée.
-     -- déplacer un rucher change l'emplacement du marqueur Entrée dans la carte des ruches du rucher.
+     -- Déplacer un rucher change l'emplacement du marqueur Entrée dans la carte des ruches du rucher.
           Les ruches ne sont pas déplacées.        
 
-Carte d'un rucher : menu "Ruchers", cliquer sur un rucher, dans l'écran détail du rucher cliquer
+Carte d'un rucher : menu "Ruchers", cliquer sur un rucher puis dans l'écran détail du rucher cliquer
    sur "Carte Google", "Carte IGN" ou "Carte OSM"
   - La carte affiche des marqueurs pour chaque ruche du rucher et un marqueur pour l'entrée du rucher
   - L'entrée du rucher est le point de départ du parcours des ruches qui est dessiné par un trait reliant les ruches.
@@ -28,11 +27,12 @@ Carte d'un rucher : menu "Ruchers", cliquer sur un rucher, dans l'écran détail
      -- pour les marqueurs des ruches, le nom de la ruche (précédé d'une * si la reine est marquée), de l'essaim et des hausses.
   - Pour les ruchers ayant plus d'une quinzaine de ruches, le parcours peut ne pas être le plus court.
      Pour l'optimiser, vous pouvez relancer son calcul en cliquant sur le bouton "Re-calculer le parcours".
-  - Deux boutons permettent de générer la liste des ruches ordonnées suivant ce parcours.
+  - Deux boutons permettent de générer la liste et la liste détaillée des ruches ordonnées suivant ce parcours.
   - Le champ Recherche permet de rechercher une ruche par son nom ou par le nom de son essaim.
      Saisir le nom complet (non sensible à la casse).
   - Pour déplacer une ruche :
-     -- carte Google, décocher la case "Marqueurs fixes" puis déplacer le marqueur de la ruche
+     -- Décocher la case "Marqueurs fixes"
+     -- carte Google déplacer le marqueur de la ruche
         Attention quand on relache le clic la nouvelle position de la ruche est enregistrée.
      -- cartes IGN ou OSM, cliquer sur le marqueur pour le sélectionner, puis le déplacer
         Attention à la fin du déplacement la nouvelle position de la ruche est enregistrée.
