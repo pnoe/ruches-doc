@@ -45,15 +45,17 @@ Prérequis : les ruches et les hausses doivent être identifiées par un nom.
           * Création : Commentaire, Remplissage
 * Ruchers
     * Liste
-        * Création (Nom, Actif, Contact, Latitude, Longitude, Altitude, Adresse, Ressource, Commentaire)
+        * Création (Nom, Actif, Contact, Latitude, Longitude, Altitude, Distance et Temps de parcours en voiture à partir du Dépôt, Adresse, Ressource, Commentaire)
         * Carte Google, IGN ou OpenStreetMap des ruchers
         * Statistiques
+        * Transhumances : affiche les déplacements de ruches dans les ruchers
     * Détail d'un rucher
         * Modifier, Météo, Ajouter des ruches, Supprimer, Historique (des ruches)
         * Carte Google, IGN ou OpenStreetMap des ruches d'un rucher
         * Événements	
             * Liste
             * Création : Commentaire
+            * Transhumances : affiche les déplacements de ruches dans le rucher
 * Récoltes
     * Liste
        * Création (Date, Type de miel, Poids de miel, Commentaire)
@@ -75,13 +77,12 @@ Prérequis : les ruches et les hausses doivent être identifiées par un nom.
     * Afficher latitude/longitude
     * Date décalée pour saisie des événements après visite
 * Infos affiche des statistiques et des alertes permettant de prévoir des actions correctives à réaliser.
-* Dump de le base de données et mise à jour de l'application
 
 
 Les événements permettent de saisir avec une date les actions qui ont été réalisées dans les ruchers. Ces événements peuvent être saisis après visite en utilisant la date décalée (menu préférences), évitant ainsi de saisir une date pour chaque événement.
 
 Les types d'événements sont :  
-* pour les ruchers, ruches, essaims et hausses : commentaires
+* pour les ruchers, ruches, essaims et hausses : commentaires (avec possibilité de notification par email)
 * pour des ruches : pesée et modification des cadres 
 * pour des essaims : ajout de sucre  et traitement (varroa).
 * pour des hausses : remplissage
