@@ -2,21 +2,25 @@ Pour une installation locale on peut se passer
  - du pare-feu uvw
  - du frontal apache2 et appeler directement tomcat (http://localhost:8080/ruches)
 On peut aussi installer ruches, tomcat et postgres avec Docker voir repository ruches-doc/docker
-On peut aussi ne pas installer tomcat et utiliser le tomcat "embedded" de spring boot, il faut :
- - modifier application.properties pour décommenter les paramètres de connexion à la base de données
-   en adaptant host, port, username et password et mettre en commentaire le paramètre de connexion jndi, 
-   puis lancer l'application : /apache-maven-3.8.6/bin/mvn spring-boot:run
-    
+On peut aussi ne pas installer tomcat et utiliser le tomcat "embedded" de spring boot :
+ - java -jar target/ruches.war -Dspring.datasource.url=jdbc:postgresql://localhost:5433/ruches 
+                               -Dspring.datasource.username=postgres 
+                               -Dspring.datasource.password=postgres
+ - en ajoutant tous les paramètres à modifier par rapport à application.properties (-Dparam=xxx)
+Pour l'ordre de prise en compte des paramètres dans Spring Boot, voir :
+  https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config    
+dans Tomcat :
+   https://tomcat.apache.org/tomcat-9.0-doc/config/context.html#Defining_a_context
 
 - Installation des paquets sur un serveur debian
   apt update
   apt upgrade -y
   # installation de apache, tomcat, la lib pour tomcat native apr, postgres
   #   le parefeu ufw et sudo
-  # git, jdk, maven pour une génération locale du fichier war à partir des sources clonées
+  # git, jdk17, maven pour une génération locale du fichier war à partir des sources clonées
   apt install -y --no-install-recommends git openjdk-17-jdk maven \
-    apache2 tomcat9 libtcnative-1 ufw sudo curl postgresql \
-    ntp
+    tomcat9 libtcnative-1 postgresql \
+    apache2 ufw sudo xz-utils curl ntp
   apt clean
 
 - ntp pour que le serveur reste à l'heure
@@ -122,6 +126,7 @@ https://github.com/IGNF/geoportal-extensions/blob/develop/doc/README-openlayers.
   -- openlayers http://openlayers.org (pour l'affichage des cartes IGN et OSM)
   -- spring boot https://projects.spring.io/spring-boot
   -- ortools pour le calcul du parcours des ruches https://developers.google.com/optimization
+  -- java, maven, git...
  - API utilisées
   -- OpenWeatherMap
   -- Google maps 
