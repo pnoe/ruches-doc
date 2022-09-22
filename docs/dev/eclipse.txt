@@ -1,0 +1,27 @@
+Installer l'environnement de développement intégré Eclipse pour Ruches :
+
+1 - Installer un jdk 17 (debian : apt install openjdk-17-jdk)
+2 - Eclipse 
+    https://www.eclipse.org/downloads/packages/
+    Installer "Eclipse IDE for Enterprise Java and Web Developers"
+      pour votre pc (Linux ou autre)
+3 - Installer tomcat 9 dans le répertoire de votre choix
+    https://tomcat.apache.org/download-90.cgi
+    (ou éventuellement avec les packages debian : apt install tomcat9)
+4 - Cloner Ruches : https://gitlab.com/ruches/ruches.git
+5 - Lancer Eclipse et déclarer le serveur Tomcat
+    -- Menu "Window/Preferences/Server/Runtime Environment"
+      ajouter Apache/Tomcat 9
+    -- Menu File/New/Other.../Server/Apache Tomcat V9.0 server ...  
+6 - Importez Ruches dans Eclipse
+     -- Menu "File/Import/Git/Project From Git" "Existing Local Repository" et 
+       désigner le répertoire où vous avez cloné git
+7 - Pour lancer Ruches depuis Eclipse vous devez aussi 
+    -- installer la base de données Postgresql et l'initialiser 
+      (voir dans ruches-doc/install installation.txt)
+    -- créer un fichier de context Tomcat sous src/main/webapp/META-INF/context.xml
+       vous pouvez ainsi donner des paramètres spécifiques (connexion à la bd notamment)
+       sans modifier le fichier application.properties
+    -- lancer Tomcat dans l'onglet Servers après ajouté l'application Ruches :
+       clic droit sur la ligne du serveur Tomcat dans cet onglet, puis "Add and Remove"
+    
