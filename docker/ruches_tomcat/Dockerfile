@@ -1,7 +1,7 @@
-FROM tomcat:9.0.56-jdk17-openjdk
+FROM tomcat:9.0.65-jdk17
 # jdk : voir version dans pom.xml
 # tomcat : spring 2.6 ne fonctionne pas avec Tomcat 10
-ARG MAVEN_VERSION=3.8.4
+ARG MAVEN_VERSION=3.8.6
 ARG USER_HOME_DIR="/root"
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries
 
@@ -15,6 +15,8 @@ RUN set -eux; \
     tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1; \
     rm -f /tmp/apache-maven.tar.gz; \
     ln -s /usr/share/maven/bin/mvn /usr/bin/mvn; \
+    apt-get update; \
+    apt-get install -y --no-install-recommends git; \
     git clone https://gitlab.com/ruches/ruches.git; \
     cd ruches; \
     mvn clean package -DskipTests; \

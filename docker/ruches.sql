@@ -25,6 +25,18 @@ CREATE DATABASE ruches;
 \connect ruches
 
 --
+-- Name: dist_rucher; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.dist_rucher (
+    id bigint NOT NULL,
+    dist integer NOT NULL,
+    temps integer NOT NULL,
+    rucher_end_id bigint,
+    rucher_start_id bigint
+);
+
+--
 -- Name: essaim; Type: TABLE; Schema: public; Owner: postgres
 --
 
