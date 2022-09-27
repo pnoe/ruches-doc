@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
-  <Resource auth="Container" type="javax.sql.DataSource"
-		name="jdbc/ruches" url="jdbc:postgresql://localhost:5432/ruches"
-		username="postgres" password="postgres"
-		driverClassName="org.postgresql.Driver" />
-  <Resources cacheMaxSize="15360" />
+  <Resources cacheMaxSize="15360" /> 
+  <Parameter name="spring.datasource.url" value="jdbc:postgresql://localhost:5432/ruches" />
+  <Parameter name="spring.datasource.username" value="postgres" />
+  <Parameter name="spring.datasource.password" value="postgres" />
   <Parameter name="accueil.titre" value="Les Abeilles de la bas"/>
   <Parameter name="ign.data.key" value="ortho,parcellaire,agriculture,essentiels,qsdfqreqffefesf"/>
   <Parameter name="gg.map.key" value="sqfererghthsez"/>

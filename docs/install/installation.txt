@@ -3,8 +3,6 @@ Pour une installation locale on peut se passer
  - du frontal apache2 et appeler directement tomcat (http://localhost:8080/ruches)
 On peut aussi installer ruches, tomcat et postgres avec Docker voir repository ruches-doc/docker
 On peut aussi ne pas installer tomcat et utiliser le tomcat "embedded" de spring boot :
- - il faut désactiver au préalable jndi dans application.properties avant de faire le build
-   mettre en commentaire spring.datasource.jndi-name=java:comp/env/jdbc/ruches
  - java -jar target/ruches.war -Dspring.datasource.url=jdbc:postgresql://localhost:5433/ruches 
                                -Dspring.datasource.username=postgres 
                                -Dspring.datasource.password=postgres
