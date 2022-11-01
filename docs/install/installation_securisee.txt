@@ -1,0 +1,62 @@
+Pour l'ordre de prise en compte des paramètres dans Spring Boot, voir :
+  https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config    
+dans Tomcat :
+   https://tomcat.apache.org/tomcat-9.0-doc/config/context.html#Defining_a_context
+
+- Installation des paquets sur un serveur debian
+  apt update
+  apt upgrade -y
+  # installation de apache, tomcat, la lib pour tomcat native apr, postgres
+  #   le parefeu ufw et sudo
+  # git, jdk17, maven pour une génération locale du fichier war à partir des sources clonées
+  apt install -y --no-install-recommends git openjdk-17-jdk maven \
+    tomcat9 libtcnative-1 postgresql \
+    apache2 ufw sudo xz-utils curl ntp
+  apt clean
+
+- ntp pour que le serveur reste à l'heure
+  # ntp pour hébergeur ovh, exemple de déclaration du serveur ntp.ovh.net
+  sed -i '/^#server ntp.*/a server ntp.ovh.net' /etc/ntp.conf
+  
+- timezone
+	timedatectl list-timezones | grep Paris
+		Europe/Paris
+	timedatectl set-timezone Europe/Paris
+	ls /etc/localtime -l
+
+- Configuration minimale du parefeu.
+  On autorise tous les appels sortants et uniquement les appels entrants ssh, http et https
+  /usr/sbin/ufw default deny incoming
+  /usr/sbin/ufw default allow outgoing
+  /usr/sbin/ufw allow 22
+  /usr/sbin/ufw allow 80
+  /usr/sbin/ufw allow 443
+  On peut aussi limiter les appels entrants sur le port 22 à quelques ip autorisées,
+  par exemple :
+  ufw allow from www.xxx.yyy.zzz to any port 22
+  et supprimer le "ufw allow 22"
+  
+- Configuration apache
+	# suppression des activations existantes
+	rm /etc/apache2/sites-enabled/*
+    Copier le fichier docs/installation/vhost.conf sous /etc/apache2/sites-available
+    Activation de ce fichier :
+    /usr/sbin/a2ensite vhost.conf
+    Activation des modules apache ssl (https) proxy et proxy_ajp (redirect apache tomcat)
+    /usr/sbin/a2enmod ssl
+    /usr/sbin/a2enmod proxy
+    /usr/sbin/a2enmod proxy_ajp
+    
+Pour le reste, tomcat, postgresql, voir installation.txt
+
+Il faudra ajouter des dumps de sauvegarde de la base ruche.
+On peut désactiver les logs console de l'application ruche :
+  https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto.logging.logback.file-only-output
+Il faudra aussi utiliser https pour le frontal apache :
+ - achat d'un nom de domaine
+ - création d'un certificat (https://letsencrypt.org/)
+ 
+
+
+  
+  

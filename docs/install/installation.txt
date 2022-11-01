@@ -1,6 +1,3 @@
-Pour une installation locale on peut se passer
- - du pare-feu uvw
- - du frontal apache2 et appeler directement tomcat (http://localhost:8080/ruches)
 On peut aussi installer ruches, tomcat et postgres avec Docker voir repository ruches-doc/docker
 On peut aussi ne pas installer tomcat et utiliser le tomcat "embedded" de spring boot :
  - java -jar target/ruches.war -Dspring.datasource.url=jdbc:postgresql://localhost:5433/ruches 
@@ -15,43 +12,11 @@ dans Tomcat :
 - Installation des paquets sur un serveur debian
   apt update
   apt upgrade -y
-  # installation de apache, tomcat, la lib pour tomcat native apr, postgres
-  #   le parefeu ufw et sudo
+  # installation de tomcat, la lib pour tomcat native apr, postgres
   # git, jdk17, maven pour une génération locale du fichier war à partir des sources clonées
-  apt install -y --no-install-recommends git openjdk-17-jdk maven \
-    tomcat9 libtcnative-1 postgresql \
-    apache2 ufw sudo xz-utils curl ntp
+  apt install -y --no-install-recommends git openjdk-17-jdk maven tomcat9 libtcnative-1 postgresql
   apt clean
 
-- ntp pour que le serveur reste à l'heure
-  # ntp pour hébergeur ovh, exemple de déclaration du serveur ntp.ovh.net
-  sed -i '/^#server ntp.*/a server ntp.ovh.net' /etc/ntp.conf
-  
-- timezone
-	timedatectl list-timezones | grep Paris
-		Europe/Paris
-	timedatectl set-timezone Europe/Paris
-	ls /etc/localtime -l
-
-- Configuration minimale du parefeu.
-  On autorise tous les appels sortants et uniquement les appels entrants ssh, http et https
-  /usr/sbin/ufw default deny incoming
-  /usr/sbin/ufw default allow outgoing
-  /usr/sbin/ufw allow 22
-  /usr/sbin/ufw allow 80
-  /usr/sbin/ufw allow 443
-  
-- Configuration apache
-	# suppression des activations existantes
-	rm /etc/apache2/sites-enabled/*
-    Copier le fichier docs/installation/vhost.conf sous /etc/apache2/sites-available
-    Activation de ce fichier :
-    /usr/sbin/a2ensite vhost.conf
-    Activation des modules apache ssl (https) proxy et proxy_ajp (redirect apache tomcat)
-    /usr/sbin/a2enmod ssl
-    /usr/sbin/a2enmod proxy
-    /usr/sbin/a2enmod proxy_ajp
-    
 - Configuration Tomcat
    Copier le fichier docs/installation/server.xml sous /etc/tomcat9
    Copier le fichier docs/installation/context.xml sous /etc/tomcat9/Catalina/localhost/
