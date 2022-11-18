@@ -78,7 +78,7 @@ Mettre à jour les versions dans src/main/resources/templates/include.html
            interactions: ol.interaction.defaults.defaults({ doubleClickZoom: false }).extend([select, translate]),
 		   controls: ol.control.defaults.defaults({
   -- IGN Extension Géoportail pour OpenLayers (cartes ign et osm)
-      version 3.2.14  GpPluginOpenLayers.js et GpPluginOpenLayers.css
+      version 3.2.18  GpPluginOpenLayers.js et GpPluginOpenLayers.css
         supprimé les fichiers src
     https://geoservices.ign.fr/documentation/utilisation_web/extension-ol3.html
     https://github.com/IGNF/geoportal-extensions/releases

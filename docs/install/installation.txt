@@ -50,6 +50,8 @@ dans Tomcat :
  Un utilisateur "admin", mot de passe "admin" est défini dans ruches_donnees_min.sql
   
 - Carte Google maps
+  L'accès à ces cartes est payant depuis quelques années :
+    https://developers.google.com/maps/documentation/javascript/usage-and-billing
   https://cloud.google.com/maps-platform/
   https://developers.google.com/maps/documentation/javascript/tutorial
 -- L'affichage de ces cartes nécessite une clé
