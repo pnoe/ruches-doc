@@ -35,8 +35,8 @@ dans Tomcat :
     psql -f sql/ruches_donnees_min.sql ruches
     psql -c "alter user postgres with password 'postgres';"
 - Définir les paramètres de l'application dans les fichiers 
-    src/main/resources/application.properties
-    et dans le context.xml Tomcat (voir exemple de context dans le répertoire docs/installation)
+   dans le context Tomcat (conf/Catalina/localhost/ruches.xml,
+     voir exemple de context dans le répertoire docs/installation.
 -- connexion à la base de données
    définir paramètres de connexion dans context.xml
 -- logging.file : le chemin des fichiers log
@@ -53,18 +53,20 @@ dans Tomcat :
   https://cloud.google.com/maps-platform/
   https://developers.google.com/maps/documentation/javascript/tutorial
 -- L'affichage de ces cartes nécessite une clé
-  Voir gg.map.key et gg.map.url dans application.properties ou context.xml
+  Voir gg.map.key et gg.map.url dans application.properties ou dans context.xml
  
     
-- Carte IGN
+- Carte IGN (Couverture France uniquement ?)
+  Les cartes IGN sont disponibles sans clé de license sauf pour la couche des scans.
+  Facultatif : Pour ajouter la couche des scan (GEOGRAPHICALGRIDSYSTEMS.MAPS) :
+  Mettre "ign.carteIGN.license" à "true" dans le ficher de context Tomcat
   https://geoservices.ign.fr/
 	connexion
 	créer nouveau login ign
   Créer une clé de service web :
 	mon compte / mes clés de service web
 	sélectionner usage gratuit des scan25/100/OACI
-    
-  Création d'un fichier autoconf :
+  Création d'un fichier autoconf (remplacer "maclé" par la clé obtenue) :
     curl "https://wxs.ign.fr/ortho/autoconf?keys=parcellaire,agriculture,essentiels,maclé&output=json&callback=callback" > autoconf.js
     copier ce fichier autoconf.js sous ruches/WEB-INF/classes/static/js
   On peut aussi utiliser la clé directement dans le fichier context.xml : 
