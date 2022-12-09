@@ -58,7 +58,7 @@ dans Tomcat :
   Voir gg.map.key et gg.map.url dans application.properties ou dans context.xml
  
     
-- Carte IGN (Couverture France uniquement ?)
+- Carte IGN (Couverture France uniquement)
   Les cartes IGN sont disponibles sans clé de license sauf pour la couche des scans.
   Facultatif : Pour ajouter la couche des scan (GEOGRAPHICALGRIDSYSTEMS.MAPS) :
   Mettre "ign.carteIGN.license" à "true" dans le ficher de context Tomcat
