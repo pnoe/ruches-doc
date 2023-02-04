@@ -23,21 +23,21 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
        bootstrap.bundle.min.js qui inclut popper.js
          ainsi que bootstrap.min.css
        css et js déclarés dans templates/include.html
-  -- datatables 1.13.1
+  -- datatables 1.13.2
   		   https://datatables.net/download/index	
         Step 1 styling : Bootstrap 5  5.1.3
         Step 2 packages : DataTables (le numéro de version est affiché sur cette ligne)
         Extensions (10 éléments à cocher) : 
-          Buttons 2.3.3 :
-            Column visibility 2.3.3
-            HTML5 export 2.3.3
+          Buttons 2.3.4 :
+            Column visibility 2.3.4
+            HTML5 export 2.3.4
               pdfmake 0.1.36
-            Print view 2.3.3
+            Print view 2.3.4
           FixedHeader 3.3.1
           Responsive 2.4.0
           RowGroup 1.3.0
-          RowReorder 1.3.1 (utilisé par rucheAjoutRetrait.html)
-          Select 1.5.0
+          RowReorder 1.3.2 (utilisé par rucheAjoutRetrait.html)
+          Select 1.6.0
         Step 3 onglet Download  Minify et Concatenate
            Download files
           copier datatables.min.css et datatables.min.js dans resources/static/js/datatables-x.y.z
@@ -85,7 +85,7 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
     https://github.com/IGNF/geoportal-extensions/issues/217
     https://www.developpez.net/forums/f1255/applications/sig-systeme-d-information-geographique/ign-api-geoportail/
   -- export png et pdf des cartes ign et osm
-    dom-to-image-2.12.0 (pour export png rucher détail)
+    dom-to-image-2.14.0 (pour export png rucher détail)
     	https://github.com/1904labs/dom-to-image-more/releases
   -- jspdf-2.5.1 https://github.com/MrRio/jsPDF (pour export pdf de la carte OSM des ruches d'un rucher)
        copier dist/umd.min.js
