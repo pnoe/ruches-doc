@@ -98,12 +98,13 @@ Carte des ruchers
 
 Carte d'un rucher
 * elle permet de déplacer ses ruches.
-* en cliquant sur une ruche on affiche un lien vers le détail de cette ruche et vers son essaim ainsi que la liste des hausses.
+* un clic sur une ruche affiche un lien vers le détail de cette ruche et vers son essaim ainsi que la liste des hausses.
 * le chemin optimal de parcours des ruches est affiché. On peut [exporter ce parcours](docs/images/exportKmlGgEarth.png) et la position des ruches au format GPX ou KML.
-* des outils permettent d'effectuer des mesures de longueur, surface et d'azimut (cartes IGN et OSM)
+* mesures de longueur, surface et d'azimut (cartes IGN et OSM)
 * pour les cartes IGN on peut dessiner un profil, calculer une altitude et afficher les parcelles cadastrales.
-* on peut afficher des cercles pour matérialiser les distances de butinage
-* des outils permettent de dessiner des polygones, des polylignes, des marqueurs avec des textes que l'on peut afficher dans des popups. Ces dessins peuvent être enregistrés en base de donnée.
+* cercles pour matérialiser les distances de butinage
+* des outils de dessin de polygones, de polylignes, de marqueurs avec des textes que l'on peut afficher dans des popups. Ces dessins peuvent être enregistrés en base de donnée.
+* géolocalisation GPS avec dépose d'un marqueur sur la carte.
 
 ## Nos clients, ils nous font confiance !   :-)
 https://les-abeilles-de-la-lisette.fr/wordpress/

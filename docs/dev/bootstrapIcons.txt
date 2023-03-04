@@ -1,0 +1,33 @@
+Recherche des icones utilisés dans l'application Ruches
+ cd ~/git/ruches/src/main/resources/templates :
+ grep -roh 'bi-.*"' | sed "s/[ \"].*//" | sort -u > ${home}iconsBt.txt
+ cat ~/iconsBt.txt | cut -c '4-' > ${home}iconsBtSansbi.txt
+ 
+Créations des fichiers bootstrap-icons.css, scss et json ainsi que des fichiers font 
+bootstrap-icons.woff et woff2 :
+voir 
+https://github.com/twbs/icons
+https://github.com/tancredi/fantasticon
+
+sudo npm install -g fantasticon
+git clone https://github.com/twbs/icons.git
+cd icons
+npm i
+Ne garder que les fichiers svg des icones utilisés :
+mkdir ruches
+cat ~/iconsBtSansbi.txt | xargs -I '{}' mv icons/{}.svg ruches
+rm icons/*.svg
+cp ruches/* icons
+Créer un fichier bootstrap-icons.json avec uniquement les svg utilisés :
+grep -wf  ~/iconsBtSansbiG.txt bootstrap-icons.json  > bootstrap-icons.jsonxx
+ bootstrap-icons.jsonxx ajouter { et } en début et fin de fichier,
+ supprimer dernière virgule et renommer
+
+npm run icons
+
+Copier ensuite les fichiers bootstrap-icons.css, .scss, woff et woff2 dans ruches
+Les autres fichiers (notemment .svg et json) ne sont pas utiles en production.
+
+
+  
+
