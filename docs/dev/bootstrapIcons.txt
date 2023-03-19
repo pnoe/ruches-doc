@@ -1,6 +1,7 @@
-Recherche des icones utilisés dans l'application Ruches
+Recherche des icones Bootstrap utilisés dans l'application Ruches
  cd ~/git/ruches/src/main/resources/templates :
  grep -roh 'bi-.*"' | sed "s/[ \"].*//" | sort -u > ${home}iconsBt.txt
+ Suppression de bi-
  cat ~/iconsBt.txt | cut -c '4-' > ${home}iconsBtSansbi.txt
  
 Créations des fichiers bootstrap-icons.css, scss et json ainsi que des fichiers font 
@@ -18,12 +19,15 @@ mkdir ruches
 cat ~/iconsBtSansbi.txt | xargs -I '{}' mv icons/{}.svg ruches
 rm icons/*.svg
 cp ruches/* icons
-Créer un fichier bootstrap-icons.json avec uniquement les svg utilisés :
-grep -wf  ~/iconsBtSansbiG.txt bootstrap-icons.json  > bootstrap-icons.jsonxx
- bootstrap-icons.jsonxx ajouter { et } en début et fin de fichier,
- supprimer dernière virgule et renommer
 
 npm run icons
+
+✔ Generated ./font/fonts/bootstrap-icons.woff2
+✔ Generated ./font/fonts/bootstrap-icons.woff
+✔ Generated ./font/bootstrap-icons.css
+✔ Generated ./font/bootstrap-icons.scss
+✔ Generated ./font/bootstrap-icons.json
+
 
 Copier ensuite les fichiers bootstrap-icons.css, .scss, woff et woff2 dans ruches
 Les autres fichiers (notemment .svg et json) ne sont pas utiles en production.
