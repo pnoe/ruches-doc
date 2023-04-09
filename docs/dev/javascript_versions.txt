@@ -99,7 +99,7 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
     	https://momentjs.com/
     	moment-with-locales.min-2.29.4.js
   -- icones bootstrap-icons-1.10.2 à mettre dans resources/static/images
-    et chargement css dans include.html
+    voir docs/dev/bootstratpicons.txt
     https://github.com/twbs/icons/releases/
     
   -- https://github.com/erikflowers/weather-icons
