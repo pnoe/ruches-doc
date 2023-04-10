@@ -190,7 +190,8 @@ ALTER TABLE public.ruche OWNER TO postgres;
 CREATE TABLE public.ruche_type (
     id bigint NOT NULL,
     nb_cadres_max integer,
-    nom character varying(255) NOT NULL
+    nom character varying(255) NOT NULL,
+    commentaire character varying(255)
 );
 
 

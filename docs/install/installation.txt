@@ -1,13 +1,17 @@
-On peut aussi installer ruches, tomcat et postgres avec Docker voir repository ruches-doc/docker
-On peut aussi ne pas installer tomcat et utiliser le tomcat "embedded" de spring boot :
- - java -jar target/ruches.war -Dspring.datasource.url=jdbc:postgresql://localhost:5433/ruches 
+Installation de l'application Ruches sur un serveur Tomcat
+
+On peut aussi 
+ - installer ruches, tomcat et postgres avec Docker voir repository ruches-doc/docker
+ - ne pas installer tomcat et utiliser le tomcat "embedded" de spring boot :
+  -- java -jar target/ruches.war -Dspring.datasource.url=jdbc:postgresql://localhost:5433/ruches 
                                -Dspring.datasource.username=postgres 
                                -Dspring.datasource.password=postgres
- - en ajoutant tous les paramètres à modifier par rapport à application.properties (-Dparam=xxx)
+  -- en ajoutant tous les paramètres à modifier par rapport à application.properties (-Dparam=xxx)
 Pour l'ordre de prise en compte des paramètres dans Spring Boot, voir :
   https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config    
 dans Tomcat :
    https://tomcat.apache.org/tomcat-9.0-doc/config/context.html#Defining_a_context
+
 
 - Installation des paquets sur un serveur debian
   apt update
