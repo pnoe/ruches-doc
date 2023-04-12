@@ -61,10 +61,10 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
   -- jquery.validate 1.19.5 https://jqueryvalidation.org/
        voir aussi localization/messages_fr.min.js à copier en js/jquery.validate-1.19.3-messages_fr.min.js
   -- graphiques (camembert recolteStat.html) 
-    chartjs 4.2.0  (manque chart.min, pris .umd)
+    chartjs 4.2.1  (manque chart.min, pris .umd)
     http://www.chartjs.org/ https://github.com/chartjs/Chart.js 
     https://github.com/chartjs/Chart.js/releases/
-      copier le fichier chart.min.js sous resources/static/js/chart.min-x.y.z.js
+      copier le fichier chart.umd.js sous resources/static/js/chart.umd-x.y.z.js
   -- jquery.datetimepicker.full.min-2.5.20.js https://xdsoft.net/jqplugins/datetimepicker/
   		https://github.com/xdan/datetimepicker
   		https://github.com/xdan/datetimepicker/releases

@@ -1,5 +1,6 @@
 Le champ actif ou active permet de masquer des entités qui ne sont 
 plus utilisées sans les supprimer.
+Les classe java des entités sont suivies de leurs champs, type java.
 
 1 Ruche
 - nom String (non null, unique)
@@ -16,6 +17,7 @@ plus utilisées sans les supprimer.
 2 RucheType
 - nom String (non null, unique)
 - nbCadresMax Integer
+- commentaire String
 
 3 Rucher
 - nom String (non null, unique)
