@@ -3,7 +3,7 @@
 Copier les fichiers dans le répertoire : src/main/resources/static/js
 Mettre à jour les versions des noms de fichiers dans src/main/resources/templates/include.html
  
-  -- d3 7.8.1 pour les graphes de decendances des essaims
+  -- d3 7.8.4 pour les graphes de decendances des essaims
        	 https://d3js.org/ chercher d3.zip  d3.min.js à renommer avec la version
          d3.min-x.y.z.js à copier sous src/main/resources/static/js
   -- d3-scale-chromatic d3-interpolate et d3-color pour la couleur des graphes jsChart

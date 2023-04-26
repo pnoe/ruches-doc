@@ -22,7 +22,7 @@ Prérequis : les ruches et les hausses doivent être identifiées par un nom.
             * Création : Commentaire, Pesée, Cadre
 * Types de ruche
     * Liste
-        * Création (Nom, Cadres max)
+        * Création (Nom, Cadres max, Commentaire)
     * Modifier	
 * Essaims
     * Liste

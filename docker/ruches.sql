@@ -192,7 +192,8 @@ ALTER TABLE public.ruche OWNER TO postgres;
 CREATE TABLE public.ruche_type (
     id bigint NOT NULL,
     nb_cadres_max integer,
-    nom character varying(255) NOT NULL
+    nom character varying(255) NOT NULL,
+    commentaire character varying(255)
 );
 
 
@@ -289,7 +290,7 @@ INSERT INTO public.ruche VALUES (4, true, '', '2021-03-16', 43.531433, 5.580132,
 -- Data for Name: ruche_type; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.ruche_type VALUES (3, 10, 'dadant_10');
+INSERT INTO public.ruche_type VALUES (3, 10, 'dadant_10','Dadant 10 cadres');
 
 
 --

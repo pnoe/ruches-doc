@@ -1,7 +1,7 @@
-FROM tomcat:9.0.65-jdk17
+FROM tomcat:9.0.74-jdk17
 # jdk : voir version dans pom.xml
 # tomcat : spring 2.6 ne fonctionne pas avec Tomcat 10
-ARG MAVEN_VERSION=3.8.6
+ARG MAVEN_VERSION=3.9.1
 ARG USER_HOME_DIR="/root"
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries
 
