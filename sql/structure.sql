@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 11.5 (Ubuntu 11.5-3.pgdg19.04+1)
--- Dumped by pg_dump version 11.5 (Ubuntu 11.5-3.pgdg19.04+1)
+-- Dumped from database version 15.2 (Ubuntu 15.2-1)
+-- Dumped by pg_dump version 15.2 (Ubuntu 15.2-1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -18,7 +18,7 @@ SET row_security = off;
 
 SET default_tablespace = '';
 
-SET default_with_oids = false;
+SET default_table_access_method = heap;
 
 --
 -- Name: dist_rucher; Type: TABLE; Schema: public; Owner: postgres
@@ -177,7 +177,8 @@ CREATE TABLE public.ruche (
     poids_vide integer,
     essaim_id bigint,
     rucher_id bigint,
-    type_id bigint
+    type_id bigint,
+    production boolean NOT NULL
 );
 
 

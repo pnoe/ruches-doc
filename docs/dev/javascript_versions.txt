@@ -51,7 +51,7 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
         https://datatables.net/forums/
       Supprimé les datatables.js et .css en ne gardant que les fichiers .min
         
-  -- jquery 3.6.3 http://jquery.com/download/ 
+  -- jquery 3.7.0 http://jquery.com/download/ 
    Download the compressed, production jQuery et map file sous resources/static/js
    
   -- jquery-ui 1.13.2 https://jqueryui.com/	

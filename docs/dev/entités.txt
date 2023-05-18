@@ -13,6 +13,7 @@ Les classe java des entités sont suivies de leurs champs, type java.
 - longitude Float
 - latitude Float
 - commentaire String
+- production boolean
 
 2 RucheType
 - nom String (non null, unique)

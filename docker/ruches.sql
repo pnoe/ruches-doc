@@ -179,7 +179,8 @@ CREATE TABLE public.ruche (
     poids_vide integer,
     essaim_id bigint,
     rucher_id bigint,
-    type_id bigint
+    type_id bigint,
+    production boolean NOT NULL
 );
 
 
@@ -281,9 +282,9 @@ INSERT INTO public.personne VALUES (1, true, 'admin', 'admin@admin.fr', 'admin',
 -- Data for Name: ruche; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.ruche VALUES (6, true, '', '2021-03-16', 43.531395, 5.579845, 'AB', 15000, 9, 18, 3);
-INSERT INTO public.ruche VALUES (21, true, '', '2021-03-16', 43.53133, 5.5803156, 'AC', 15000, 23, 18, 3);
-INSERT INTO public.ruche VALUES (4, true, '', '2021-03-16', 43.531433, 5.580132, 'AA', 15000, 8, 18, 3);
+INSERT INTO public.ruche VALUES (6, true, '', '2021-03-16', 43.531395, 5.579845, 'AB', 15000, 9, 18, 3, true);
+INSERT INTO public.ruche VALUES (21, true, '', '2021-03-16', 43.53133, 5.5803156, 'AC', 15000, 23, 18, 3, true);
+INSERT INTO public.ruche VALUES (4, true, '', '2021-03-16', 43.531433, 5.580132, 'AA', 15000, 8, 18, 3, true);
 
 
 --
