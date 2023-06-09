@@ -4,6 +4,7 @@
   <Parameter name="spring.datasource.url" value="jdbc:postgresql://localhost:5432/ruches" />
   <Parameter name="spring.datasource.username" value="postgres" />
   <Parameter name="spring.datasource.password" value="postgres" />
+  <Parameter name="spring.jpa.properties.hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
   <Parameter name="accueil.titre" value="Les Abeilles de la bas"/>
   <Parameter name="ign.data.key" value="ortho,parcellaire,agriculture,essentiels,qsdfqreqffefesf"/>
   <Parameter name="gg.map.key" value="sqfererghthsez"/>
