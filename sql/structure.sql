@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 15.2 (Ubuntu 15.2-1)
--- Dumped by pg_dump version 15.2 (Ubuntu 15.2-1)
+-- Dumped from database version 15.3 (Ubuntu 15.3-0ubuntu0.23.04.1)
+-- Dumped by pg_dump version 15.3 (Ubuntu 15.3-0ubuntu0.23.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -25,120 +25,179 @@ SET default_table_access_method = heap;
 --
 
 CREATE TABLE public.dist_rucher (
-    id bigint NOT NULL,
     dist integer NOT NULL,
     temps integer NOT NULL,
+    id bigint NOT NULL,
     rucher_end_id bigint,
     rucher_start_id bigint
 );
 
 
 ALTER TABLE public.dist_rucher OWNER TO postgres;
+
+--
+-- Name: dist_rucher_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.dist_rucher_seq
+    START WITH 1
+    INCREMENT BY 50
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.dist_rucher_seq OWNER TO postgres;
+
 --
 -- Name: essaim; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.essaim (
-    id bigint NOT NULL,
     actif boolean NOT NULL,
-    commentaire character varying(255),
+    agressivite integer,
     date_acquisition date,
-    nom character varying(255) NOT NULL,
+    proprete integer,
     reine_date_naissance date,
     reine_marquee boolean NOT NULL,
+    id bigint NOT NULL,
     souche_id bigint,
-    agressivite integer,
-    proprete integer
+    commentaire character varying(255),
+    nom character varying(255) NOT NULL
 );
 
 
 ALTER TABLE public.essaim OWNER TO postgres;
 
 --
+-- Name: essaim_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.essaim_seq
+    START WITH 1
+    INCREMENT BY 50
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.essaim_seq OWNER TO postgres;
+
+--
 -- Name: evenement; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.evenement (
-    id bigint NOT NULL,
-    commentaire character varying(255),
-    date timestamp without time zone,
-    type integer,
+    type smallint,
+    date timestamp(6) without time zone,
     essaim_id bigint,
     hausse_id bigint,
+    id bigint NOT NULL,
     ruche_id bigint,
     rucher_id bigint,
-    valeur character varying(64)
+    valeur character varying(64),
+    commentaire character varying(255),
+    CONSTRAINT evenement_type_check CHECK (((type >= 0) AND (type <= 14)))
 );
 
 
 ALTER TABLE public.evenement OWNER TO postgres;
 
 --
+-- Name: evenement_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.evenement_seq
+    START WITH 1
+    INCREMENT BY 50
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.evenement_seq OWNER TO postgres;
+
+--
 -- Name: hausse; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.hausse (
-    id bigint NOT NULL,
     active boolean NOT NULL,
-    commentaire character varying(255),
     date_acquisition date,
     nb_cadres integer,
     nb_cadres_max integer,
-    nom character varying(255) NOT NULL,
     ordre_sur_ruche integer,
     poids_vide integer,
-    ruche_id bigint
+    id bigint NOT NULL,
+    ruche_id bigint,
+    commentaire character varying(255),
+    nom character varying(255) NOT NULL
 );
 
 
 ALTER TABLE public.hausse OWNER TO postgres;
 
 --
--- Name: hibernate_sequence; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: hausse_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE public.hibernate_sequence
+CREATE SEQUENCE public.hausse_seq
     START WITH 1
-    INCREMENT BY 1
+    INCREMENT BY 50
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
 
 
-ALTER TABLE public.hibernate_sequence OWNER TO postgres;
+ALTER TABLE public.hausse_seq OWNER TO postgres;
 
 --
 -- Name: personne; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.personne (
-    id bigint NOT NULL,
     active boolean NOT NULL,
+    id bigint NOT NULL,
+    tokenexpiration timestamp(6) without time zone,
     adresse character varying(255) NOT NULL,
     email character varying(255),
-    login character varying(255),
+    login character varying(255) NOT NULL,
     nom character varying(255) NOT NULL,
     password character varying(255),
     prenom character varying(255) NOT NULL,
     roles character varying(255),
     tel character varying(255),
-    token character varying(255),
-    tokenexpiration timestamp without time zone
+    token character varying(255)
 );
 
 
 ALTER TABLE public.personne OWNER TO postgres;
 
 --
+-- Name: personne_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.personne_seq
+    START WITH 1
+    INCREMENT BY 50
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.personne_seq OWNER TO postgres;
+
+--
 -- Name: recolte; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.recolte (
+    poids_miel integer,
+    type_miel smallint,
+    date timestamp(6) without time zone,
     id bigint NOT NULL,
     commentaire character varying(255),
-    date timestamp without time zone,
-    poids_miel integer,
-    type_miel integer
+    CONSTRAINT recolte_type_miel_check CHECK (((type_miel >= 0) AND (type_miel <= 7)))
 );
 
 
@@ -149,11 +208,11 @@ ALTER TABLE public.recolte OWNER TO postgres;
 --
 
 CREATE TABLE public.recolte_hausse (
-    id bigint NOT NULL,
     poids_apres integer,
     poids_avant integer,
     essaim_id bigint,
     hausse_id bigint,
+    id bigint NOT NULL,
     recolte_id bigint,
     ruche_id bigint,
     rucher_id bigint
@@ -163,63 +222,132 @@ CREATE TABLE public.recolte_hausse (
 ALTER TABLE public.recolte_hausse OWNER TO postgres;
 
 --
+-- Name: recolte_hausse_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.recolte_hausse_seq
+    START WITH 1
+    INCREMENT BY 50
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.recolte_hausse_seq OWNER TO postgres;
+
+--
+-- Name: recolte_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.recolte_seq
+    START WITH 1
+    INCREMENT BY 50
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.recolte_seq OWNER TO postgres;
+
+--
 -- Name: ruche; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.ruche (
-    id bigint NOT NULL,
-    active boolean,
-    commentaire character varying(255),
+    active boolean NOT NULL,
     date_acquisition date,
     latitude real,
     longitude real,
-    nom character varying(255) NOT NULL,
     poids_vide integer,
+    production boolean NOT NULL,
     essaim_id bigint,
+    id bigint NOT NULL,
     rucher_id bigint,
     type_id bigint,
-    production boolean NOT NULL
+    commentaire character varying(255),
+    nom character varying(255) NOT NULL
 );
 
 
 ALTER TABLE public.ruche OWNER TO postgres;
 
 --
+-- Name: ruche_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.ruche_seq
+    START WITH 1
+    INCREMENT BY 50
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.ruche_seq OWNER TO postgres;
+
+--
 -- Name: ruche_type; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.ruche_type (
-    id bigint NOT NULL,
     nb_cadres_max integer,
-    nom character varying(255) NOT NULL,
-    commentaire character varying(255)
+    id bigint NOT NULL,
+    commentaire character varying(255),
+    nom character varying(255) NOT NULL
 );
 
 
 ALTER TABLE public.ruche_type OWNER TO postgres;
 
 --
+-- Name: ruche_type_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.ruche_type_seq
+    START WITH 1
+    INCREMENT BY 50
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.ruche_type_seq OWNER TO postgres;
+
+--
 -- Name: rucher; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.rucher (
-    id bigint NOT NULL,
     actif boolean NOT NULL,
-    adresse character varying(255),
     altitude integer,
-    commentaire character varying(255),
     depot boolean NOT NULL,
     latitude real,
     longitude real,
-    nom character varying(255) NOT NULL,
-    ressource character varying(255),
     contact_id bigint,
-    dessin character varying
+    id bigint NOT NULL,
+    adresse character varying(255),
+    commentaire character varying(255),
+    dessin character varying(255),
+    nom character varying(255) NOT NULL,
+    ressource character varying(255)
 );
 
 
 ALTER TABLE public.rucher OWNER TO postgres;
 
+--
+-- Name: rucher_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.rucher_seq
+    START WITH 1
+    INCREMENT BY 50
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.rucher_seq OWNER TO postgres;
 
 --
 -- Name: dist_rucher dist_rucher_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
@@ -227,6 +355,16 @@ ALTER TABLE public.rucher OWNER TO postgres;
 
 ALTER TABLE ONLY public.dist_rucher
     ADD CONSTRAINT dist_rucher_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: essaim essaim_nom_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.essaim
+    ADD CONSTRAINT essaim_nom_key UNIQUE (nom);
+
+
 --
 -- Name: essaim essaim_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
@@ -241,6 +379,14 @@ ALTER TABLE ONLY public.essaim
 
 ALTER TABLE ONLY public.evenement
     ADD CONSTRAINT evenement_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: hausse hausse_nom_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.hausse
+    ADD CONSTRAINT hausse_nom_key UNIQUE (nom);
 
 
 --
@@ -268,19 +414,27 @@ ALTER TABLE ONLY public.recolte_hausse
 
 
 --
--- Name: recolte_hausse recolte_hausse_recolte_id_hausse_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.recolte_hausse
-    ADD CONSTRAINT recolte_hausse_recolte_id_hausse_id_key UNIQUE (recolte_id, hausse_id);
-
-
---
 -- Name: recolte recolte_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.recolte
     ADD CONSTRAINT recolte_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: ruche ruche_essaim_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.ruche
+    ADD CONSTRAINT ruche_essaim_id_key UNIQUE (essaim_id);
+
+
+--
+-- Name: ruche ruche_nom_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.ruche
+    ADD CONSTRAINT ruche_nom_key UNIQUE (nom);
 
 
 --
@@ -292,6 +446,14 @@ ALTER TABLE ONLY public.ruche
 
 
 --
+-- Name: ruche_type ruche_type_nom_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.ruche_type
+    ADD CONSTRAINT ruche_type_nom_key UNIQUE (nom);
+
+
+--
 -- Name: ruche_type ruche_type_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -300,59 +462,19 @@ ALTER TABLE ONLY public.ruche_type
 
 
 --
+-- Name: rucher rucher_nom_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.rucher
+    ADD CONSTRAINT rucher_nom_key UNIQUE (nom);
+
+
+--
 -- Name: rucher rucher_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.rucher
     ADD CONSTRAINT rucher_pkey PRIMARY KEY (id);
-
-
---
--- Name: rucher uk_1jx5wslivv15iu7ciaeg6wtwr; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.rucher
-    ADD CONSTRAINT uk_1jx5wslivv15iu7ciaeg6wtwr UNIQUE (nom);
-
-
---
--- Name: ruche uk_cvfi8k2gu31nuclrmdueg1pm6; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.ruche
-    ADD CONSTRAINT uk_cvfi8k2gu31nuclrmdueg1pm6 UNIQUE (essaim_id);
-
-
---
--- Name: hausse uk_hrlrtt93mghrc2raruhvohrt2; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.hausse
-    ADD CONSTRAINT uk_hrlrtt93mghrc2raruhvohrt2 UNIQUE (nom);
-
-
---
--- Name: ruche uk_kjqsbk0l01yxvb6dwrlvrwnq6; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.ruche
-    ADD CONSTRAINT uk_kjqsbk0l01yxvb6dwrlvrwnq6 UNIQUE (nom);
-
-
---
--- Name: ruche_type uk_rj98q9fmt7t766k0xwdvp1700; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.ruche_type
-    ADD CONSTRAINT uk_rj98q9fmt7t766k0xwdvp1700 UNIQUE (nom);
-
-
---
--- Name: essaim uk_s7cpei1xnay5q8enem8htkj0w; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.essaim
-    ADD CONSTRAINT uk_s7cpei1xnay5q8enem8htkj0w UNIQUE (nom);
 
 
 --
@@ -409,6 +531,7 @@ ALTER TABLE ONLY public.recolte_hausse
 
 ALTER TABLE ONLY public.recolte_hausse
     ADD CONSTRAINT fkc59g3pd6nd9ao4om9o872toms FOREIGN KEY (hausse_id) REFERENCES public.hausse(id);
+
 
 --
 -- Name: dist_rucher fke27cts3oeai9x6rh3semuh096; Type: FK CONSTRAINT; Schema: public; Owner: postgres
@@ -493,4 +616,3 @@ ALTER TABLE ONLY public.evenement
 --
 -- PostgreSQL database dump complete
 --
-
