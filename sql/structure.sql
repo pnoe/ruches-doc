@@ -478,6 +478,27 @@ ALTER TABLE ONLY public.rucher
 
 
 --
+-- Name: evenement_essaim; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX evenement_essaim ON public.evenement USING btree (essaim_id);
+
+
+--
+-- Name: evenement_hausse; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX evenement_hausse ON public.evenement USING btree (hausse_id);
+
+
+--
+-- Name: evenement_ruche; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX evenement_ruche ON public.evenement USING btree (ruche_id);
+
+
+--
 -- Name: hausse fk3mxijxbjpissl3ivkykdh7qyy; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -616,3 +637,4 @@ ALTER TABLE ONLY public.evenement
 --
 -- PostgreSQL database dump complete
 --
+

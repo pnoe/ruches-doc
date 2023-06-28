@@ -65,6 +65,7 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
     https://github.com/chartjs/Chart.js/releases/
       copier le fichier chart.umd.js sous resources/static/js/chart.umd-x.y.z.js
   -- jquery.datetimepicker.full.min-2.5.20.js https://xdsoft.net/jqplugins/datetimepicker/
+        et jquery.datetimepicker.min.css
   		https://github.com/xdan/datetimepicker
   		https://github.com/xdan/datetimepicker/releases
   -- openlayers (cartes ign et osm)   
