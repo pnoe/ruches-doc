@@ -23,19 +23,19 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
        bootstrap.bundle.min.js qui inclut popper.js
          ainsi que bootstrap.min.css
        css et js déclarés dans templates/include.html
-  -- datatables 1.13.4
+  -- datatables 1.13.5
   		   https://datatables.net/download/index	
         Step 1 styling : Bootstrap 5  5.1.3
         Step 2 packages : DataTables (le numéro de version est affiché sur cette ligne)
         Extensions (8 éléments à cocher avec Buttons) : 
-          Buttons 2.3.6 :
-            Column visibility 2.3.6
-            HTML5 export 2.3.6
+          Buttons 2.4.0 :
+            Column visibility 2.4.0
+            HTML5 export 2.4.0
               pdfmake 0.2.7
-            Print view 2.3.6
-          RowGroup 1.3.1 (utilisé dans recolteDetail.hml pour grouper les hausses par ruche)
-          RowReorder 1.3.3 (utilisé par rucheAjoutRetrait.html)
-          Select 1.6.2 (sélection de lignes multiples des listes)
+            Print view 2.4.0
+          RowGroup 1.4.0 (utilisé dans recolteDetail.hml pour grouper les hausses par ruche)
+          RowReorder 1.4.0 (utilisé par rucheAjoutRetrait.html)
+          Select 1.7.0 (sélection de lignes multiples des listes)
         Step 3 onglet Download  Minify et Concatenate
            Download files
           copier datatables.min.css et datatables.min.js dans resources/static/js/datatables-x.y.z
