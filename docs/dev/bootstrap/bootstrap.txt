@@ -8,14 +8,32 @@ https://getbootstrap.com/docs/5.3/customize/optimize/
 cd git
 git clone https://github.com/twbs/bootstrap.git
 cd bootstrap
+git checkout v5.3.0
 npm i
 # affiche l'aide
 npm run
-# compile les scss, css, minifie (voir conf scss/bootstrap.scss)
+# modifier scss/bootstrap.scss (voir ruches-doc/docs/dev/bootstrap/)
+# compiler les css
 npm run css
 cp dist/css/bootstrap.min.css ../ruches/src/main/resources/static/js/bootstrap-5.3.0/
 # tests css en supprimant les fichiers mis en cache dans le navigateur
-# compile les js (voir conf js/index.umd.js et js/index.esm.js)
+# modifier js/index.umd.js et js/index.esm.js (voir ruches-doc/docs/dev/bootstrap/)
+# compiler les js
 npm run js
 cp dist/js/bootstrap.bundle.min.js ../ruches/src/main/resources/static/js/bootstrap-5.3.0/
+# tests js en supprimant les fichiers mis en cache dans le navigateur
 
+
+Vérifier
+ - menu, dropdown menu, menu responsive (nécessite css transitions et js collapse)
+ - que le menu 
+   -- reste fixe quand on scrolle les tableaux, 
+   -- que le texte des tableaux ne recouvre pas le menu
+   -- que les liens des menus n'apparaissent pas comme des liens
+ - tooltip sur icone de navigation
+ - tooltip sur ? (par exemple dans evemenent/notifications:
+ - pagination datatables ok
+ 
+ 
+bootstrap.min.css 232Ko -> 180Ko
+bootstrap.bundle.min.js 80,4Ko -> 48Ko
