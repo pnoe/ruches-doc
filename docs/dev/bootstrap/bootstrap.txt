@@ -1,0 +1,21 @@
+Pour diminuer la taille des fichiers dist/css/bootstrap.min.css et
+dist/js/bootstrap.min.js
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
+https://getbootstrap.com/docs/5.3/customize/optimize/
+
+
+
+cd git
+git clone https://github.com/twbs/bootstrap.git
+cd bootstrap
+npm i
+# affiche l'aide
+npm run
+# compile les scss, css, minifie (voir conf scss/bootstrap.scss)
+npm run css
+cp dist/css/bootstrap.min.css ../ruches/src/main/resources/static/js/bootstrap-5.3.0/
+# tests css en supprimant les fichiers mis en cache dans le navigateur
+# compile les js (voir conf js/index.umd.js et js/index.esm.js)
+npm run js
+cp dist/js/bootstrap.bundle.min.js ../ruches/src/main/resources/static/js/bootstrap-5.3.0/
+
