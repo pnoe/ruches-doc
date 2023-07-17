@@ -17,6 +17,7 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
         Download, https://github.com/d3/d3-color#installing
           wget https://cdn.jsdelivr.net/npm/d3-color@3 renommer en
   		d3-color.min-x.y.z.js à copier sous src/main/resources/static/js
+  		
   -- bootstrap 5.2.3 https://getbootstrap.com/
        release notes : https://blog.getbootstrap.com/
        Download ready-to-use compiled code for Bootstrap
@@ -53,21 +54,20 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
   -- jquery 3.7.0 http://jquery.com/download/ 
    Download the compressed, production jQuery et map file sous resources/static/js
    
-  -- jquery-ui 1.13.2 https://jqueryui.com/	
-      Quick downloads/Stable
-      https://github.com/jquery/jquery-ui/tree/master/ui/i18n
-      https://api.jqueryui.com/datepicker/
   -- jquery.validate 1.19.5 https://jqueryvalidation.org/
        voir aussi localization/messages_fr.min.js à copier en js/jquery.validate-1.19.3-messages_fr.min.js
+       
   -- graphiques (camembert recolteStat.html) 
     chartjs 4.3.0  (manque chart.min, pris .umd)
     http://www.chartjs.org/ https://github.com/chartjs/Chart.js 
     https://github.com/chartjs/Chart.js/releases/
       copier le fichier chart.umd.js sous resources/static/js/chart.umd-x.y.z.js
+      
   -- jquery.datetimepicker.full.min-2.5.20.js https://xdsoft.net/jqplugins/datetimepicker/
         et jquery.datetimepicker.min.css
   		https://github.com/xdan/datetimepicker
   		https://github.com/xdan/datetimepicker/releases
+  		
   -- openlayers (cartes ign et osm)   
     ol-6.15.1  http://openlayers.org/ https://libraries.io/npm/openlayers
        copier ol.css et ol.js dans js/ol-x.y.z
@@ -83,21 +83,30 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
     https://github.com/IGNF/geoportal-extensions/releases
     https://github.com/IGNF/geoportal-extensions/issues/217
     https://www.developpez.net/forums/f1255/applications/sig-systeme-d-information-geographique/ign-api-geoportail/
+    
   -- export png et pdf des cartes ign et osm
     dom-to-image-2.15.0  (pour export png rucher détail OSM)
     	Ne fonctionne pas avec dom-to-image-3.x.y
     	https://github.com/1904labs/dom-to-image-more/releases
+    	
   -- jspdf-2.5.1 https://github.com/MrRio/jsPDF (pour export pdf de la carte OSM des ruches d'un rucher)
        copier dist/umd.min.js
        version en commentaire dans le fichier jsPDF/dist/jspdf.min.js
        après version 2.1.1 ajouter : const { jsPDF } = window.jspdf;
+       
   -- jquery-date-range-picker (pour liste événements avec choix de la période)
     	nécessite la lib js moment
     	https://longbill.github.io/jquery-date-range-picker/
+    	https://github.com/longbill/jquery-date-range-picker
     	jquery-date-range-picker-0.21.1
+    	Changé dans le fichier min.js le texte 
+    	"default-default": "Merci de choisir une date" par
+    	  "... une période"
+    	
   -- moment (pour jquery-date-range-picker)
     	https://momentjs.com/
     	moment-with-locales.min-2.29.4.js
+    	
   -- icones bootstrap-icons-1.10.2 à mettre dans resources/static/images
     voir docs/dev/bootstratpicons.txt
     https://github.com/twbs/icons/releases/
