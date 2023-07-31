@@ -8,7 +8,7 @@ https://getbootstrap.com/docs/5.3/customize/optimize/
 cd git
 git clone https://github.com/twbs/bootstrap.git
 cd bootstrap
-git checkout v5.3.0
+git checkout v5.3.1
 npm i
 # affiche l'aide
 npm run

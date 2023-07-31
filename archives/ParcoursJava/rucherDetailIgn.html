@@ -36,9 +36,7 @@
 	const ruchesurl = [[@{/}]];
 	const _csrf_token = [[${_csrf.token}]];
 	const dessinEnregistretxt = [[#{dessinEnregistre}]];
-	window.onload = function () {
- 		rucherDetail(true); 			
-	}
+	document.addEventListener('DOMContentLoaded', () => rucherDetail(true));
 </script>
 <script th:replace="include :: cssol"></script>
 <script th:replace="include :: cssGpPluginOpenLayers"></script>
