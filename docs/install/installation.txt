@@ -10,7 +10,7 @@ On peut aussi
 Pour l'ordre de prise en compte des paramètres dans Spring Boot, voir :
   https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config    
 dans Tomcat :
-   https://tomcat.apache.org/tomcat-9.0-doc/config/context.html#Defining_a_context
+  https://tomcat.apache.org/tomcat-10.1-doc/config/context.html#Defining_a_context
 
 
 - Installation des paquets sur un serveur debian
@@ -22,8 +22,10 @@ dans Tomcat :
   apt clean
 
 - Configuration Tomcat
-   Copier le fichier docs/installation/server.xml sous /etc/tomcat9
-   Copier le fichier docs/installation/context.xml sous /etc/tomcat9/Catalina/localhost/
+   Copier le fichier docs/installation/server.xml sous /etc/tomcat10
+   Copier le fichier docs/installation/context.xml sous /etc/tomcat10/Catalina/localhost/
+   Mettre en commentaire la déclaration de la servlet par défaut et de la servlet jsp ainsi que leurs mappings
+     dans /etc/tomcat10/web.xml
  
 - Clone des sources puis création du fichier war
   git clone https://gitlab.com/ruches/ruches.git

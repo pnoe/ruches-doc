@@ -55,7 +55,7 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
         https://github.com/DataTables/DataTables
         https://datatables.net/forums/
   
-  -- jquery 3.7.0 http://jquery.com/download/ 
+  -- jquery 3.7.1 http://jquery.com/download/ 
    Download the compressed, production jQuery et map file sous resources/static/js
    Nécessaire pour datatables, jquery.validate, jquery.datetimepicker et jquery-date-range-picker
    
