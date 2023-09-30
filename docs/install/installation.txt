@@ -25,7 +25,7 @@ dans Tomcat :
    Copier le fichier docs/installation/server.xml sous /etc/tomcat10
    Copier le fichier docs/installation/context.xml sous /etc/tomcat10/Catalina/localhost/
    Mettre en commentaire la déclaration de la servlet par défaut et de la servlet jsp ainsi que leurs mappings
-     dans /etc/tomcat10/web.xml
+     dans /etc/tomcat10/web.xml. C'est nécessaire depuis Spring Boot 3.1.2 sinon l'application ne démarre pas.
  
 - Clone des sources puis création du fichier war
   git clone https://gitlab.com/ruches/ruches.git

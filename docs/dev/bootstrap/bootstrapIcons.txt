@@ -6,7 +6,7 @@ Recherche des icones Bootstrap utilisés dans l'application Ruches
  Suppression de bi-
  cat ~/iconsBt.txt | cut -c '4-' > ~/iconsBtSansbi.txt
  
-Créations des fichiers bootstrap-icons.css, scss et json ainsi que des fichiers font 
+Créations des fichiers bootstrap-icons.min.css, scss ainsi que des fichiers font 
 bootstrap-icons.woff et woff2 :
 voir 
 https://github.com/twbs/icons
@@ -22,6 +22,8 @@ cat ~/iconsBtSansbi.txt | xargs -I '{}' mv icons/{}.svg ruches
 rm icons/*.svg
 cp ruches/* icons
 
+mettre aussi à jour icons/font/bootstrap-icons.json en ne gardant que les fichiers utilisés	
+
 npm run icons
 
 ✔ Generated ./font/fonts/bootstrap-icons.woff2
@@ -30,9 +32,10 @@ npm run icons
 ✔ Generated ./font/bootstrap-icons.scss
 ✔ Generated ./font/bootstrap-icons.json
 
-Copier ensuite dans resources/static/images/bootstrap-icons-1.10.2 les fichiers bootstrap-icons.css, .scss 
+Copier ensuite dans resources/static/images/bootstrap-icons-x.y.z les fichiers bootstrap-icons.min.css, .scss
+    éventuellement .css et .json pour sauvegarde 
   et dans un sous répertoire fonts : woff et woff2
-Les autres fichiers (notemment .svg et json) ne sont pas utiles en production.
+Les autres fichiers (notamment .svg) ne sont pas utiles en production.
 
 
   
