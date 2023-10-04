@@ -43,8 +43,8 @@ Les classe java des entités sont suivies de leurs champs, type java.
 - souche Essaim
 - agressivite Integer
 - proprete Integer
-- comm_disp character Stirng
-- date_dispersion LocalDateTime
+- commDisp character Stirng
+- dateDispersion LocalDateTime
 
 5 Hausse
 - nom String (non null, unique)
