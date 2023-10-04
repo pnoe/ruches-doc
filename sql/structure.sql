@@ -63,7 +63,9 @@ CREATE TABLE public.essaim (
     id bigint NOT NULL,
     souche_id bigint,
     commentaire character varying(255),
-    nom character varying(255) NOT NULL
+    nom character varying(255) NOT NULL,
+    comm_disp character varying(255),
+    date_dispersion timestamp(6) without time zone
 );
 
 
