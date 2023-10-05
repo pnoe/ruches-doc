@@ -294,6 +294,7 @@ ALTER TABLE public.ruche_seq OWNER TO postgres;
 CREATE TABLE public.ruche_type (
     nb_cadres_max integer,
     id bigint NOT NULL,
+    version integer default 0,
     commentaire character varying(255),
     nom character varying(255) NOT NULL
 );
