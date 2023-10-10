@@ -59,8 +59,9 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
    Download the compressed, production jQuery et map file sous resources/static/js
    Nécessaire pour datatables, jquery.validate, jquery.datetimepicker et jquery-date-range-picker
    
-  -- jquery.validate 1.19.5 https://jqueryvalidation.org/
+  -- jquery.validate 1.20.0 https://jqueryvalidation.org/
        voir aussi localization/messages_fr.min.js à copier en js/jquery.validate-1.19.3-messages_fr.min.js
+       les deux se trouvent dans release source.
        
   -- graphiques (camembert recolteStat.html, courbe des poids essaimsPoids.html ...) 
     chartjs 4.4.0  (manque chart.min, pris .umd)
