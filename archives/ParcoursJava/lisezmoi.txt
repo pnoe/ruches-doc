@@ -1,7 +1,16 @@
 Ce dossier contient les fichiers de l'application Ruches pour le calcul en java 
 du parcours des ruches d'un rucher.
+
 La version courante de ruche utilise la bibliothèque ortools de google pour le calcul du parcours.
 Ortools est plus performant mais présencte l'inconvénient d'être écrit en C++ et importé dans Ruches
 en version compilée au travers de jni.
 
+
+
+Dans TSPService la version la plus récente qui ajoute une initialisation en choisissant la 
+ruche la plus proche de la précédente. Les performances sont moins bonnes (en temps de calcul
+et en distance minimale) que celles d'ortools.
+
 Le calcul du parcours est dans RucherService.java et son appel dans les autres fichiers.
+RucherService inclut un algorithme branch and bound exact qui donne le meilleur parcours
+dans un temps raisonnable pour 17 ruches maxi.
