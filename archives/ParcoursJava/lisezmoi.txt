@@ -1,4 +1,5 @@
-Ce dossier contient les fichiers de l'application Ruches pour le calcul en java du parcours des ruches d'un rucher.
+Ce dossier contient les fichiers de l'application Ruches pour le calcul en java 
+du parcours des ruches d'un rucher.
 La version courante de ruche utilise la bibliothèque ortools de google pour le calcul du parcours.
 Ortools est plus performant mais présencte l'inconvénient d'être écrit en C++ et importé dans Ruches
 en version compilée au travers de jni.

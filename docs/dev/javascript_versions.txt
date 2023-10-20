@@ -18,7 +18,7 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
           wget https://cdn.jsdelivr.net/npm/d3-color@3 renommer en
   		d3-color.min-x.y.z.js à copier sous src/main/resources/static/js
   		
-  -- bootstrap 5.3.1 https://getbootstrap.com/
+  -- bootstrap 5.3.2 https://getbootstrap.com/
        release notes : https://blog.getbootstrap.com/
        Download ready-to-use compiled code for Bootstrap
        bootstrap.bundle.min.js qui inclut popper.js
@@ -26,6 +26,7 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
        css et js déclarés dans templates/include.html
        Ou mieux, reconstruire ces fichiers en supprimant les widgets inutilisés
          voir docs/dev/bootstrap
+         
   -- datatables 1.13.6-2 (-2 pour buttons 2.4.2) (dépend de jquery)
   		   https://datatables.net/download/index	
         Step 1 styling : Bootstrap 5  5.3.0
@@ -81,7 +82,7 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
   		https://github.com/xdan/datetimepicker/releases
   		
   -- openlayers (cartes ign et osm)   
-    ol-6.15.1  http://openlayers.org/ https://libraries.io/npm/openlayers
+    ol-6.15.1  https://openlayers.org/ https://libraries.io/npm/openlayers
        copier ol.css et ol.js dans js/ol-x.y.z
        ol-7.0.0 incompatible avec Extension Géoportail 3.2.18
          Uncaught TypeError: class constructors must be invoked with 'new' (LayerSwitcher Controll.call...)
@@ -89,7 +90,7 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
            interactions: ol.interaction.defaults.defaults({ doubleClickZoom: false }).extend([select, translate]),
 		   controls: ol.control.defaults.defaults({
   -- IGN Extension Géoportail pour OpenLayers (cartes ign et osm)
-      version 3.2.18  GpPluginOpenLayers.js et GpPluginOpenLayers.css
+      version 3.3.4  GpPluginOpenLayers.js et GpPluginOpenLayers.css
         supprimé les fichiers src
     https://geoservices.ign.fr/documentation/utilisation_web/extension-ol3.html
     https://github.com/IGNF/geoportal-extensions/releases
