@@ -160,6 +160,7 @@ ALTER TABLE public.hausse_seq OWNER TO postgres;
 CREATE TABLE public.personne (
     active boolean NOT NULL,
     id bigint NOT NULL,
+    version integer default 0,
     tokenexpiration timestamp(6) without time zone,
     adresse character varying(255) NOT NULL,
     email character varying(255),
