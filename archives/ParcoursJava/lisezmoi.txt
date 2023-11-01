@@ -9,7 +9,7 @@ en version compilée au travers de jni.
 
 Dans TSPService la version la plus récente qui ajoute une initialisation en choisissant la 
 ruche la plus proche de la précédente. Les performances sont moins bonnes (en temps de calcul
-et en distance minimale) que celles d'ortools.
+et en distance minimale) que celles d'ortools. Voir branche tspJava.
 
 Le calcul du parcours est dans RucherService.java et son appel dans les autres fichiers.
 RucherService inclut un algorithme branch and bound exact qui donne le meilleur parcours
