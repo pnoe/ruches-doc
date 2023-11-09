@@ -14,27 +14,30 @@ Utiliser sql/structure.sql pour créer la base Postgresql et sql/ruches_donnes_m
 Prérequis : les ruches et les hausses doivent être identifiées par un nom.
 * Ruches
     * Liste
-        * Création (Nom, Active, Poids, Type, Date d'acquisition, Latitude, Longitude, Commentaire)
+        * Création (Nom, Active, Production, Poids, Type, Date d'acquisition, Latitude, Longitude, Commentaire)
     * Détail d'une ruche
         * Modifier, Cloner, Ajout/Retrait/Réordonner des hausses, Changer de rucher, Supprimer
         * Événements
             * Liste
-            * Création : Commentaire, Pesée, Cadre
+            * Création : Commentaire
+        * Historique des hausses
 * Types de ruche
     * Liste
-        * Création (Nom, Cadres max, Commentaire)
-    * Modifier	
+         * Création (Nom, Cadres max, Commentaire)
+    * Détail d'un type de ruche
+         * Modifier, Supprimer  	
 * Essaims
     * Liste
         * Création (Nom, Reine marquée, Date de naissance, Actif, Date d'acquisition, Commentaire, Souche, Agressivité, Propreté)
-        * Traitement d'un lot
-        * Ajout de sucre par lot
-        * Statistiques
+        * Commentaire, Traitement et Ajout de sucre pour un lot d'essaims
+        * Statistiques production et Statistiques âge des reines
     * Détail d'un essaim
-        * Modifier, Cloner, Associer avec une ruche, Supprimer, [Graphe de descendance](docs/images/grapheDeDescendance.png), Disperser
+        * Modifier, Cloner, Essaimer, Associer avec une ruche, Supprimer, [Graphe de descendance](docs/images/grapheDeDescendance.png), Disperser
         * Événements
             * Liste
-            * Création : Commentaire, Sucre, Traitement
+            * Création : Commentaire, Sucre, Traitement, Pesée, Cadre
+        * Historique ruche/rucher
+        * Courbe des poids
 * Hausses
     * Liste
        * Création (Nom, Active, Date d'acquisition, Poids, Nombre de cadres, Nombre de cadres max, Commentaire)
@@ -45,11 +48,12 @@ Prérequis : les ruches et les hausses doivent être identifiées par un nom.
           * Création : Commentaire, Remplissage
 * Ruchers
     * Liste
-        * Création (Nom, Actif, Contact, Latitude, Longitude, Altitude, Distance et Temps de parcours en voiture à partir du Dépôt, Adresse, Ressource, Commentaire)
+        * Création (Nom, Actif, Contact, Latitude, Longitude, Altitude, Adresse, Ressource, Commentaire)
         * Carte Google, IGN ou OpenStreetMap des ruchers
-        * Statistiques
+        * Statistiques production des ruchers
         * Transhumances : affiche les déplacements de ruches dans les ruchers
     * Détail d'un rucher
+        * Distance et Temps de parcours en voiture à partir du Dépôt 
         * Modifier, Météo, Ajouter des ruches, Supprimer, Historique (des ruches)
         * Carte Google, IGN ou OpenStreetMap des ruches d'un rucher
         * Événements	
@@ -59,9 +63,9 @@ Prérequis : les ruches et les hausses doivent être identifiées par un nom.
 * Récoltes
     * Liste
        * Création (Date, Type de miel, Poids de miel, Commentaire)
-       * Statistiques production essaim/récolte
+       * Statistiques production essaim/récolte, statitiques annuelles
     * Détail d'une récolte
-        * Modifier, Choix des hausses, Retrait des hausses, [Statistiques (camenbert)](docs/images/recolteStatEssaim.png), Supprimer    
+        * Modifier, Choix des hausses, Saisie des poids de miel en tableau, Retrait des hausses, [Statistiques (camenbert)](docs/images/recolteStatEssaim.png), Supprimer    
 * Événements
     * Liste
         * Création (Date, Type d'événement, Ruche, Essaim, Rucher, Hausse, Valeur, Commentaire)
@@ -69,7 +73,7 @@ Prérequis : les ruches et les hausses doivent être identifiées par un nom.
         * Modifier, supprimer
 * Personnes (authentification, contacts de rucher)
     * Liste
-        * Création (Nom, Prénom, Email, Adresse, Login, Password, Rôles, Active)
+        * Création (Nom, Prénom, Téléphone, Email, Adresse, Login, Password, Rôles, Active)
     * Détail d'une personne
         * Modifier, supprimer
 * Préférences
@@ -83,8 +87,7 @@ Les événements permettent de saisir avec une date les actions qui ont été r�
 
 Les types d'événements sont :  
 * pour les ruchers, ruches, essaims et hausses : commentaires (avec possibilité de notification par email)
-* pour des ruches : pesée et modification des cadres 
-* pour des essaims : ajout de sucre  et traitement (varroa).
+* pour des essaims : ajout de sucre, traitement (varroa), pesée et modification des cadres
 * pour des hausses : remplissage
 
 Les ruches, essaims, hausses, ruchers et personnes peuvent être rendus actifs ou inactfs pour qu'ils n'apparaissent plus dans les listes.
