@@ -211,12 +211,12 @@ ALTER TABLE public.recolte OWNER TO postgres;
 --
 
 CREATE TABLE public.recolte_hausse (
-    poids_apres integer,
-    poids_avant integer,
+    poids_apres integer NOT NULL,
+    poids_avant integer NOT NULL,
     essaim_id bigint,
     hausse_id bigint,
     id bigint NOT NULL,
-    recolte_id bigint,
+    recolte_id bigint NOT NULL,
     ruche_id bigint,
     rucher_id bigint
 );
