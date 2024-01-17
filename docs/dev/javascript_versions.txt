@@ -135,7 +135,7 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
     	https://momentjs.com/
     	version sans locales chargée sur :
     	https://cdnjs.com/libraries/moment.js moment sans locale :
-    	moment-min-2.29.4.js
+    	moment-min-2.30.1.js
     	    	
   -- icones bootstrap-icons-1.11.1 à mettre dans resources/static/images
     voir docs/dev/bootstratpicons.txt
