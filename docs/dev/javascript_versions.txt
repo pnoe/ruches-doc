@@ -64,12 +64,16 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
        voir aussi localization/messages_fr.min.js à copier en js/jquery.validate-1.19.3-messages_fr.min.js
        les deux se trouvent dans release source.
        
-  -- graphiques (camembert recolteStat.html, courbe des poids essaimsPoids.html ...) 
+  -- graphiques (camembert recolteStat.html, courbe des poids, graphique des événements par essaim ...) 
     chartjs 4.4.1  (manque chart.min, pris .umd)
     http://www.chartjs.org/ https://github.com/chartjs/Chart.js 
     https://github.com/chartjs/Chart.js/releases/
     https://cdnjs.com/libraries/Chart.js
       copier le fichier chart.umd.js sous resources/static/js/chart.umd.min-x.y.z.js
+      
+  --chartjs-plugin-zoom  2.0.1 pour zoom graphique des événements par essaim
+    https://github.com/chartjs/chartjs-plugin-zoom/
+    chartjs-plugin-zoom.min.js
       
   -- luxon 3.4.4 pour courbe des poids avec chartjs
   	https://github.com/moment/luxon
