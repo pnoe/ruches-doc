@@ -27,19 +27,19 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
        Ou mieux, reconstruire ces fichiers en supprimant les widgets inutilisés
          voir docs/dev/bootstrap
          
-  -- datatables 2.0.3 (dépend de jquery)
+  -- datatables 2.0.4 (dépend de jquery)
   		   https://datatables.net/download/index	
         Step 1 styling : Bootstrap 5  5.3.0
         Step 2 packages : DataTables (le numéro de version est affiché sur cette ligne)
         Extensions (8 éléments à cocher avec Buttons) : 
-          Buttons 3.0.1 :
-            Column visibility 3.0.1
-            HTML5 export 3.0.1
+          Buttons 3.0.2 :
+            Column visibility 3.0.2
+            HTML5 export 3.0.2
               pdfmake 0.2.7
-            Print view 3.0.1
+            Print view 3.0.2
           RowGroup 1.5.0 (utilisé dans recolteDetail.hml pour grouper les hausses par ruche)
           RowReorder 1.5.0 (utilisé par rucheAjoutRetrait.html)
-          Select 2.0.0 (sélection de lignes multiples des listes)
+          Select 2.0.1 (sélection de lignes multiples des listes)
         Step 3 onglet Download  Minify et Concatenate
            Download files
           copier datatables.min.css et datatables.min.js dans resources/static/js/datatables-x.y.z

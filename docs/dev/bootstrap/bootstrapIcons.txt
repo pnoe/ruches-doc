@@ -5,6 +5,7 @@ Recherche des icones Bootstrap utilisés dans l'application Ruches
  grep -roh 'bi-.*"' | sed "s/[ \"].*//" | sort -u > ~/iconsBt.txt
  Suppression de bi-
  cat ~/iconsBt.txt | cut -c '4-' > ~/iconsBtSansbi.txt
+ ou vi s1,$s/^bi-//
  
 Créations des fichiers bootstrap-icons.min.css, scss ainsi que des fichiers font 
 bootstrap-icons.woff et woff2 :
@@ -23,6 +24,7 @@ rm icons/*.svg
 cp ruches/* icons
 
 mettre aussi à jour icons/font/bootstrap-icons.json en ne gardant que les fichiers utilisés	
+ (en récupérant l'ancien)
 
 npm run icons
 
