@@ -37,7 +37,8 @@ Prérequis : les ruches et les hausses doivent être identifiées par un nom.
             * Liste
             * Création : Commentaire, Sucre, Traitement, Pesée, Cadre
         * Historique ruche/rucher
-        * Courbe des poids
+        * Graphique des événements
+        * Statistiques de production
 * Hausses
     * Liste
        * Création (Nom, Active, Date d'acquisition, Poids, Nombre de cadres, Nombre de cadres max, Commentaire)
