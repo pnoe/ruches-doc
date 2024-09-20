@@ -45,6 +45,7 @@ Les classe java des entités sont suivies de leurs champs, type java.
 - proprete Integer
 - commDisp character Stirng
 - dateDispersion LocalDateTime
+- origine ReineOrigine
 
 5 Hausse
 - nom String (non null, unique)
