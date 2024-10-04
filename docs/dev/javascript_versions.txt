@@ -27,7 +27,7 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
        Ou mieux, reconstruire ces fichiers en supprimant les widgets inutilisés
          voir docs/dev/bootstrap
          
-  -- datatables 2.1.7 (dépend de jquery)
+  -- datatables 2.1.8 (dépend de jquery)
   		   https://datatables.net/download/index	
         Step 1 styling : Bootstrap 5  5.3.0	
         Step 2 packages : DataTables (le numéro de version est affiché sur cette ligne)
@@ -105,7 +105,8 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
     https://www.developpez.net/forums/f1255/applications/sig-systeme-d-information-geographique/ign-api-geoportail/
     
   -- export png des cartes ign et osm
-    dom-to-image-3.4.3  (pour export png ou pdf rucher détail OSM)
+    dom-to-image-3.4.5  (pour export png ou pdf rucher détail OSM)
+      Pas clair voir jspdf ci-après. Et rien dans les cartes IGN.
     	1) en fait ça fonctionne avec chrome, pas avec firefox (si avec workaround ci-dessous) :
     	 https://github.com/1904labs/dom-to-image-more/issues/146
     	 https://stackoverflow.com/questions/28690643/firefox-error-rendering-an-svg-image-to-html5-canvas-with-drawimage
@@ -122,7 +123,7 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
     peut être remplacé par code spécifique openlayers :
     https://openlayers.org/en/latest/examples/export-map.html
     	
-  -- jspdf-2.5.1 https://github.com/MrRio/jsPDF (pour export pdf de la carte OSM des ruches d'un rucher)
+  -- jspdf-2.5.2 https://github.com/MrRio/jsPDF (pour export pdf de la carte OSM des ruches d'un rucher)
        copier dist/umd.min.js
        version en commentaire dans le fichier jsPDF/dist/jspdf.min.js
        après version 2.1.1 ajouter : const { jsPDF } = window.jspdf;
