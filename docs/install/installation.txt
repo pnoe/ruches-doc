@@ -94,6 +94,8 @@ https://geoservices.ign.fr/documentation/services/utilisation-web/extension-pour
 - API OpenWeatherMap
   https://openweathermap.org/appid
   créer une clé et copier cette clé dans le fichier context.xml
+  Il faut maintenant fournir un moyen de paiement pour avoir accès à l'api,
+    comme pour les cartes google.
 
 - Composants opensource utilisés :
   -- d3 pour les graphes de descendances des essaims https://d3js.org
@@ -108,7 +110,8 @@ https://geoservices.ign.fr/documentation/services/utilisation-web/extension-pour
   -- openlayers http://openlayers.org (pour l'affichage des cartes IGN et OSM)
   -- spring boot https://projects.spring.io/spring-boot
   -- ortools pour le calcul du parcours des ruches https://developers.google.com/optimization
-  -- java, maven, git...
+  -- java
+  -- maven, git, eslint...
  - API utilisées
   -- OpenWeatherMap
   -- Google maps 
