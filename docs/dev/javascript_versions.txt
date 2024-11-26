@@ -71,7 +71,7 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
     https://cdnjs.com/libraries/Chart.js
       copier le fichier chart.umd.js sous resources/static/js/chart.umd.x.y.z.js
       
-  --chartjs-plugin-zoom  2.0.1 pour zoom graphique des événements par essaim
+  --chartjs-plugin-zoom  2.2.0 pour zoom graphique des événements par essaim
     https://github.com/chartjs/chartjs-plugin-zoom/
     chartjs-plugin-zoom.min.js
   -- hammer.js 2.0.8 pour le plugin zoom de chartjs sinon pan ne fonctionne pas.
