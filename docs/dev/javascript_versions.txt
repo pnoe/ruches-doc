@@ -65,7 +65,7 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
        les deux se trouvent dans release source.
        
   -- graphiques (camembert recolteStat.html, courbe des poids, graphique des événements par essaim ...) 
-    chartjs 4.4.6 (manque chart.min, pris .umd)
+    chartjs 4.4.7 (manque chart.min, pris .umd)
     http://www.chartjs.org/ https://github.com/chartjs/Chart.js 
     https://github.com/chartjs/Chart.js/releases/
     https://cdnjs.com/libraries/Chart.js
@@ -105,7 +105,7 @@ Mettre à jour les versions des noms de fichiers dans src/main/resources/templat
     https://www.developpez.net/forums/f1255/applications/sig-systeme-d-information-geographique/ign-api-geoportail/
     
   -- export png des cartes ign et osm
-    dom-to-image-3.4.5  (pour export png ou pdf rucher détail OSM)
+    dom-to-image-3.5.0  (pour export png ou pdf rucher détail OSM)
       Pas clair voir jspdf ci-après. Et rien dans les cartes IGN.
     	1) en fait ça fonctionne avec chrome, pas avec firefox (si avec workaround ci-dessous) :
     	 https://github.com/1904labs/dom-to-image-more/issues/146
